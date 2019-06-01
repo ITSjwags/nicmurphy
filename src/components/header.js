@@ -3,6 +3,27 @@ import styled from 'styled-components'
 import resumeSrc from '../images/Nic Murphy Resume.pdf'
 import arrowSrc from '../images/down-arrow.svg'
 
+const Header = () => (
+  <Container>
+    <Headline>Nic Murphy</Headline>
+    <Tagline>
+      Writer <span>Multimedia Director</span>
+    </Tagline>
+    <Links>
+      <Link href={resumeSrc} target="_blank" rel="noopener noreferrer">
+        Resume
+      </Link>
+      <br />
+      <Link href="mailto:IG@nharrisonmurphy ">IG@nharrisonmurphy </Link>
+      <br />
+      <Link href="mailto:nic@nicmurphy.com">nic@nicmurphy.com</Link>
+    </Links>
+    <Work>
+      Work <Arrow src={arrowSrc} alt="arrow" />
+    </Work>
+  </Container>
+)
+
 const Container = styled.header`
   padding: 6vw 4vw 10vw 4vw;
 `
@@ -54,26 +75,5 @@ const Arrow = styled.img`
   width: 7.5%;
   max-width: 68px;
 `
-
-const Header = () => (
-  <Container>
-    <Headline>Nic Murphy</Headline>
-    <Tagline>
-      Writer <span>Multimedia Director</span>
-    </Tagline>
-    <Links>
-      <Link href={resumeSrc} target="_blank" rel="noopener noreferrer">
-        Resume
-      </Link>
-      <br />
-      <Link href="mailto:IG@nharrisonmurphy ">IG@nharrisonmurphy </Link>
-      <br />
-      <Link href="mailto:nic@nicmurphy.com">nic@nicmurphy.com</Link>
-    </Links>
-    <Work>
-      Work <Arrow src={arrowSrc} alt="arrow" />
-    </Work>
-  </Container>
-)
 
 export default Header
