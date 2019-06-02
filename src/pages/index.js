@@ -12,7 +12,11 @@ import ghostSrc from '../images/ghost-commander.png'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={seoKeywords} />
+    <SEO
+      title="Home"
+      keywords={seoKeywords}
+      description="Nic Murphy - Writer, Multimedia Director"
+    />
 
     <Content>
       <WorkBlock>
