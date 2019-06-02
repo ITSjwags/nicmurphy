@@ -5,9 +5,9 @@ import SEO from '../components/seo'
 import seoKeywords from '../data/keywords'
 import spiceSrc from '../images/spice-islands.png'
 import bardoSrc from '../images/BardoFullCover_1.3.png'
-import bardoLink from '../images/Bardo Zsa Zsa First Sample Chapter.pdf'
+import bardoLink from '../images/Bardo Zsa Zsa First Chapter.pdf'
 import publicSrc from '../images/public-assembly.png'
-import loisSrc from '../images/LOIS LANE and the Men of Steel (Final).pdf'
+import loisSrc from '../images/LOIS LANE and the Men of Steel.pdf'
 import ghostSrc from '../images/ghost-commander.png'
 
 const IndexPage = () => (
@@ -104,7 +104,11 @@ const IndexPage = () => (
           <Title>BARDO ZSA ZSA</Title>
           <Link href={bardoLink}>FIRST CHAPTER</Link>
         </Row>
-        <Description>Novel, 2018</Description>
+        <Description>
+          Novel, 2018
+          <br />
+          Co-Author
+        </Description>
       </WorkBlock>
 
       <WorkBlock>
