@@ -14,7 +14,9 @@ const Header = () => (
         Resume
       </Link>
       <br />
-      <Link href="mailto:IG@nharrisonmurphy ">IG@nharrisonmurphy </Link>
+      <Link href="https://www.instagram.com/nharrisonmurphy/">
+        IG@nharrisonmurphy
+      </Link>
       <br />
       <Link href="mailto:nic@nicmurphy.com">nic@nicmurphy.com</Link>
     </Links>
@@ -25,11 +27,11 @@ const Header = () => (
 )
 
 const Container = styled.header`
-  padding: 4vw;
+  padding: 2vw 4vw;
 `
 
 const Headline = styled.h1`
-  font-size: 13vw;
+  font-size: 14vw;
   line-height: 1;
   margin: 0;
   text-align: center;
@@ -49,7 +51,7 @@ const Tagline = styled.p`
 `
 
 const Links = styled.section`
-  padding: 10vw 1vw 5vw 1vw;
+  padding: 5vw 1vw;
 `
 
 const Link = styled.a`

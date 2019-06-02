@@ -35,10 +35,10 @@ const IndexPage = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          WOOLF AND THE WONDERSHOW  PRESENTS: CAGES 
+          WOOLF AND THE WONDERSHOW PRESENTS: CAGES
         </Link>
         <Description>
-          Live Experience, 2019 
+          Live Experience, 2019
           <br />
           Theatrical Director
         </Description>
@@ -46,9 +46,15 @@ const IndexPage = () => (
 
       <WorkBlock>
         <Image src={spiceSrc} alt="Spice Islands" />
-        <Title>SPICE ISLANDS </Title>
+        <Link
+          href="https://spice-islands.netlify.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          SPICE ISLANDS
+        </Link>
         <Description>
-          Short Film, 2019 
+          Short Film, 2019
           <br />
           Writer, Director
         </Description>
@@ -65,9 +71,9 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
-        <Title>BEAUTIFUL LOVE </Title>
+        <Title>BEAUTIFUL LOVE</Title>
         <Description>
-          Music Documentary, 2017 
+          Music Documentary, 2017
           <br />
           Director, Camera
         </Description>
@@ -86,7 +92,7 @@ const IndexPage = () => (
         </VideoWrapper>
         <Title>WAVES</Title>
         <Description>
-          Music Video, 2017 
+          Music Video, 2017
           <br />
           Director, Camera
         </Description>
@@ -94,22 +100,23 @@ const IndexPage = () => (
 
       <WorkBlock>
         <Image src={bardoSrc} alt="BARDO ZSA ZSA" />
-        <Title>BARDO ZSA ZSA</Title>
-        <Indent>
+        <Row>
+          <Title>BARDO ZSA ZSA</Title>
           <Link href={bardoLink}>FIRST CHAPTER</Link>
-        </Indent>
+        </Row>
         <Description>Novel, 2018</Description>
       </WorkBlock>
 
       <WorkBlock>
-        <Image src={publicSrc} alt="PUBLIC ASSEMBLY  THEATER COMPANY" />
+        <Image src={publicSrc} alt="PUBLIC ASSEMBLY THEATER COMPANY" />
         <Link href="https://www.publicassembly.us/">
-          PUBLIC ASSEMBLY  <br />
+          PUBLIC ASSEMBLY
+          <br />
           THEATER COMPANY
         </Link>
-        <Description>Founding Member, Photographer </Description>
+        <Description>Founding Member, Photographer</Description>
         <IndentedRow>
-          <Subtitle marginBottom="0">LOIS LANE AND THE MEN OF STEEL </Subtitle>
+          <Subtitle marginBottom="0">LOIS LANE AND THE MEN OF STEEL</Subtitle>
           <Row>
             <Description>Writer, Director</Description>
             <Link href={loisSrc}>SCRIPT</Link>
@@ -119,29 +126,29 @@ const IndexPage = () => (
           <Subtitle>
             THE DAY AFTER TOMORROW
             <br />
-            STARRING DENNIS QUAID 
+            STARRING DENNIS QUAID
           </Subtitle>
-          <Description>Writer, Director  </Description>
+          <Description>Writer, Director</Description>
         </IndentedRow>
         <IndentedRow>
-          <Subtitle>THE BODHI TREE </Subtitle>
-          <Description>Writer, Director  </Description>
+          <Subtitle>THE BODHI TREE</Subtitle>
+          <Description>Writer, Director</Description>
         </IndentedRow>
       </WorkBlock>
 
       <WorkBlock>
-        <Image src={ghostSrc} alt="GHOST COMMANDER " />
+        <Image src={ghostSrc} alt="GHOST COMMANDER" />
         <Link
           href="https://www.youtube.com/watch?v=SDeuJSRg1sE"
           target="_blank"
           rel="noopener noreferrer"
         >
-          FIRST CHAPTER
+          GHOST COMMANDER
         </Link>
         <Description>
-          Narrative Livestream, 2018 
+          Narrative Livestream, 2018
           <br />
-          Assistant Director (dir. Lauren Liedel) 
+          Assistant Director (dir. Lauren Liedel)
         </Description>
       </WorkBlock>
 
@@ -156,11 +163,11 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
-        <Subtitle>NEW GUARD THEATER COMPANY’S  TARTUFFE </Subtitle>
+        <Subtitle>NEW GUARD THEATER COMPANY'S TARTUFFE</Subtitle>
         <Description>
-          Proscenium Theater, 2017 
+          Proscenium Theater, 2017
           <br />
-          Assistant Director (dir. Satya Bhabha) 
+          Assistant Director (dir. Satya Bhabha)
         </Description>
       </WorkBlock>
 
@@ -175,11 +182,11 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
-        <Title>RINGO - ATMOSPHERE </Title>
+        <Title>RINGO - ATMOSPHERE</Title>
         <Description>
-          Music Video, 2016  
+          Music Video, 2016
           <br />
-          Assistant Director (dir. Ryan KRON Thompson) 
+          Assistant Director (dir. Ryan KRON Thompson)
         </Description>
       </WorkBlock>
     </Content>
@@ -191,7 +198,7 @@ const Content = styled.div`
 `
 
 const WorkBlock = styled.div`
-  margin-bottom: 3vw;
+  margin-bottom: 5vw;
 `
 
 const VideoWrapper = styled.div`
@@ -236,10 +243,6 @@ const Subtitle = styled.h3`
 const Description = styled.p`
   font-size: 3.6vw;
   margin: 0;
-`
-
-const Indent = styled.div`
-  padding-left: 5vw;
 `
 
 const IndentedRow = styled.div`
