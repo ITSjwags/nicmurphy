@@ -25,7 +25,7 @@ const Header = () => (
 )
 
 const Container = styled.header`
-  padding: 6vw 4vw 10vw 4vw;
+  padding: 4vw;
 `
 
 const Headline = styled.h1`
@@ -64,7 +64,7 @@ const Link = styled.a`
 `
 
 const Work = styled.p`
-  font-size: 10vw;
+  font-size: 7vw;
   margin: 0;
   text-align: right;
   text-transform: uppercase;
@@ -72,7 +72,7 @@ const Work = styled.p`
 
 const Arrow = styled.img`
   margin-left: -2.3vw;
-  width: 7.5%;
+  width: 5%;
   max-width: 68px;
 `
 
