@@ -6,7 +6,7 @@ const Header = () => (
   <Container>
     <Headline>Nic Murphy</Headline>
     <Tagline>
-      <span>Writer</span>
+      Writer
       <span>Multimedia Director</span>
     </Tagline>
     <Links>
@@ -43,12 +43,13 @@ const Headline = styled.h1`
 `
 
 const Tagline = styled.p`
-  align-items: center;
-  display: flex;
   font-size: 5vw;
-  justify-content: space-between;
   margin: 0;
-  padding: 0 10.5vw;
+  text-align: center;
+
+  > span {
+    margin-left: 6vw;
+  }
 `
 
 const Links = styled.section`
