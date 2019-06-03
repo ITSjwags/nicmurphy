@@ -121,7 +121,7 @@ const IndexPage = () => (
           <Subtitle marginBottom="0">LOIS LANE AND THE MEN OF STEEL</Subtitle>
           <Row>
             <Description>Writer, Director</Description>
-            <Link href="LOIS LANE and he Men of Steel.pdf">SCRIPT</Link>
+            <Link href="LOIS LANE and the Men of Steel.pdf">SCRIPT</Link>
           </Row>
         </IndentedRow>
         <IndentedRow>
