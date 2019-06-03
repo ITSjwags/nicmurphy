@@ -47,8 +47,8 @@ const Tagline = styled.p`
   display: flex;
   font-size: 5vw;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: 71vw;
+  margin: 0;
+  padding: 0 10.5vw;
 `
 
 const Links = styled.section`
