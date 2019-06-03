@@ -5,9 +5,7 @@ import SEO from '../components/seo'
 import seoKeywords from '../data/keywords'
 import spiceSrc from '../images/spice-islands.png'
 import bardoSrc from '../images/BardoFullCover_1.3.png'
-import bardoLink from '../images/Bardo Zsa Zsa First Chapter.pdf'
 import publicSrc from '../images/public-assembly.png'
-import loisSrc from '../images/LOIS LANE and the Men of Steel.pdf'
 import ghostSrc from '../images/ghost-commander.png'
 
 const IndexPage = () => (
@@ -102,7 +100,7 @@ const IndexPage = () => (
         <Image src={bardoSrc} alt="BARDO ZSA ZSA" />
         <Row>
           <Title>BARDO ZSA ZSA</Title>
-          <Link href={bardoLink}>FIRST CHAPTER</Link>
+          <Link href="Bardo Zsa Zsa First Chapter.pdf">FIRST CHAPTER</Link>
         </Row>
         <Description>
           Novel, 2018
@@ -123,7 +121,7 @@ const IndexPage = () => (
           <Subtitle marginBottom="0">LOIS LANE AND THE MEN OF STEEL</Subtitle>
           <Row>
             <Description>Writer, Director</Description>
-            <Link href={loisSrc}>SCRIPT</Link>
+            <Link href="LOIS LANE and he Men of Steel.pdf">SCRIPT</Link>
           </Row>
         </IndentedRow>
         <IndentedRow>
@@ -230,17 +228,17 @@ const Link = styled.a`
   color: #0000ff;
   cursor: pointer;
   display: inline-block;
-  font-size: 5vw;
+  font-size: 4.8vw;
   margin-bottom: 1.5vw;
 `
 
 const Title = styled.h2`
-  font-size: 5vw;
+  font-size: 4.8vw;
   margin: 0 0 ${({ marginBottom }) => marginBottom || '1.5vw'} 0;
 `
 
 const Subtitle = styled.h3`
-  font-size: 4.5vw;
+  font-size: 4.4vw;
   margin: 0 0 ${({ marginBottom }) => marginBottom || '1vw'} 0;
 `
 

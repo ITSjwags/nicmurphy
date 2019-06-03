@@ -1,16 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import resumeSrc from '../images/Nic Murphy Resume.pdf'
 import arrowSrc from '../images/down-arrow.svg'
 
 const Header = () => (
   <Container>
     <Headline>Nic Murphy</Headline>
     <Tagline>
-      Writer <span>Multimedia Director</span>
+      <span>Writer</span>
+      <span>Multimedia Director</span>
     </Tagline>
     <Links>
-      <Link href={resumeSrc} target="_blank" rel="noopener noreferrer">
+      <Link
+        href="Nic Murphy Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Resume
       </Link>
       <br />
@@ -39,15 +43,12 @@ const Headline = styled.h1`
 `
 
 const Tagline = styled.p`
+  align-items: center;
+  display: flex;
   font-size: 5vw;
-  margin: 0;
-  text-align: center;
-  position: relative;
-  left: -1.5vw;
-
-  > span {
-    margin-left: 4vw;
-  }
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 71vw;
 `
 
 const Links = styled.section`
