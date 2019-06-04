@@ -45,7 +45,7 @@ const IndexPage = () => (
       <WorkBlock>
         <Image src={spiceSrc} alt="Spice Islands" />
         <Link
-          href="https://spice-islands.netlify.com/"
+          href="https://spiceislandsfilm.com"
           target="_blank"
           rel="noopener noreferrer"
         >
