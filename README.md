@@ -2,7 +2,7 @@
 A [Gatsby v2](https://www.gatsbyjs.org/) powered website based on [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default/).
 
 ## Live Website
-[nicmurphy](https://nicmurphy.netlify.com)
+[nicmurphy.com](https://nicmurphy.com/)
 
 ## Features
 * Styled Components for styling
