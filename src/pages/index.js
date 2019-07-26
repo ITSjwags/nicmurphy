@@ -118,9 +118,28 @@ const IndexPage = () => (
         </Link>
         <Description>Founding Member, Photographer</Description>
         <IndentedRow>
+          <Subtitle marginBottom="0">
+            A TALE OF TWO FATHERS, WRITTEN WITH MY FATHER
+          </Subtitle>
+          <Row>
+            <Description>
+              Play, 2019
+              <br />
+              Writer, Director
+            </Description>
+            <Link href="A Tale of Two Fathers, Written With My Father.pdf">
+              SCRIPT
+            </Link>
+          </Row>
+        </IndentedRow>
+        <IndentedRow>
           <Subtitle marginBottom="0">LOIS LANE AND THE MEN OF STEEL</Subtitle>
           <Row>
-            <Description>Writer, Director</Description>
+            <Description>
+              Play, 2018
+              <br />
+              Writer, Director
+            </Description>
             <Link href="LOIS LANE and the Men of Steel.pdf">SCRIPT</Link>
           </Row>
         </IndentedRow>
@@ -130,11 +149,19 @@ const IndexPage = () => (
             <br />
             STARRING DENNIS QUAID
           </Subtitle>
-          <Description>Writer, Director</Description>
+          <Description>
+            Play, 2017
+            <br />
+            Writer, Director
+          </Description>
         </IndentedRow>
         <IndentedRow>
           <Subtitle>THE BODHI TREE</Subtitle>
-          <Description>Writer, Director</Description>
+          <Description>
+            Play, 2017
+            <br />
+            Writer, Director
+          </Description>
         </IndentedRow>
       </WorkBlock>
 
