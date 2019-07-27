@@ -127,9 +127,9 @@ const IndexPage = () => (
               <br />
               Writer, Director
             </Description>
-            <Link href="A Tale of Two Fathers, Written With My Father.pdf">
+            <AlteredLink href="A Tale of Two Fathers, Written With My Father.pdf">
               SCRIPT
-            </Link>
+            </AlteredLink>
           </Row>
         </IndentedRow>
         <IndentedRow>
@@ -257,6 +257,11 @@ const Link = styled.a`
   display: inline-block;
   font-size: 4.8vw;
   margin-bottom: 1.5vw;
+`
+
+const AlteredLink = styled(Link)`
+  position: relative;
+  top: -5vw;
 `
 
 const Title = styled.h2`
