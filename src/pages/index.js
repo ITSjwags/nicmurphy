@@ -77,7 +77,7 @@ const IndexPage = () => (
         </Description>
         <SemiIndentedRow>
           <Description>
-            PREMIERED AT{' '}
+            PREMIERED AND BEST OF FEST{' '}
             <LinkSmall
               href="https://videoart.net/this-fabulous-fucking-life/"
               target="_blank"
