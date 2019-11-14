@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import seoKeywords from '../data/keywords'
-import spiceSrc from '../images/spice-islands.png'
+import spiceSrc from '../images/spice-islands.jpg'
 import bardoSrc from '../images/BardoFullCover_1.3.png'
 import publicSrc from '../images/public-assembly.png'
 import ghostSrc from '../images/ghost-commander.png'
@@ -28,6 +28,16 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
+        <VideoWrapper>
+          <Video
+            src="https://player.vimeo.com/video/370975104"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </VideoWrapper>
         <Link
           href="http://cagesdtla.com/"
           target="_blank"
@@ -38,8 +48,17 @@ const IndexPage = () => (
         <Description>
           Live Experience, 2019
           <br />
-          Theatrical Director
+          Live Director and Stage Manager
         </Description>
+        <SemiIndentedRow>
+          <Link
+            href="https://noproscenium.com/theres-nothing-quite-like-cages-nopro-notes-afac8c17074d"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NO PROSCENIUM REVIEW
+          </Link>
+        </SemiIndentedRow>
       </WorkBlock>
 
       <WorkBlock>
@@ -56,6 +75,19 @@ const IndexPage = () => (
           <br />
           Writer, Director
         </Description>
+        <SemiIndentedRow>
+          <Description>
+            PREMIERED AT{' '}
+            <LinkSmall
+              href="https://videoart.net/this-fabulous-fucking-life/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              THE VIDEO ART AND EXPERIMENTAL FILM FESTIVAL
+            </LinkSmall>{' '}
+            NYC NOVEMBER 2019
+          </Description>
+        </SemiIndentedRow>
       </WorkBlock>
 
       <WorkBlock>
@@ -259,6 +291,12 @@ const Link = styled.a`
   margin-bottom: 1.5vw;
 `
 
+const LinkSmall = styled.a`
+  color: #0000ff;
+  cursor: pointer;
+  font-size: 3.6vw;
+`
+
 const AlteredLink = styled(Link)`
   position: relative;
   top: -5vw;
@@ -281,6 +319,10 @@ const Description = styled.p`
 
 const IndentedRow = styled.div`
   padding: 5vw 2.5vw 0 2.5vw;
+`
+
+const SemiIndentedRow = styled.div`
+  padding: 1.5vw 2.5vw 0 2.5vw;
 `
 
 const Row = styled.div`
