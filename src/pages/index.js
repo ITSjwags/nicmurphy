@@ -51,13 +51,13 @@ const IndexPage = () => (
           Live Director and Stage Manager
         </Description>
         <SemiIndentedRow>
-          <Link
+          <LinkSmall
             href="https://noproscenium.com/theres-nothing-quite-like-cages-nopro-notes-afac8c17074d"
             target="_blank"
             rel="noopener noreferrer"
           >
             NO PROSCENIUM REVIEW
-          </Link>
+          </LinkSmall>
         </SemiIndentedRow>
       </WorkBlock>
 
@@ -77,7 +77,7 @@ const IndexPage = () => (
         </Description>
         <SemiIndentedRow>
           <Description>
-            PREMIERED AND BEST OF FEST AT{' '}
+            Premiered and Best of Fest at{' '}
             <LinkSmall
               href="https://videoart.net/this-fabulous-fucking-life/"
               target="_blank"
@@ -85,7 +85,7 @@ const IndexPage = () => (
             >
               THE VIDEO ART AND EXPERIMENTAL FILM FESTIVAL
             </LinkSmall>{' '}
-            NYC NOVEMBER 2019
+            NYC November 2019
           </Description>
         </SemiIndentedRow>
       </WorkBlock>
@@ -322,7 +322,7 @@ const IndentedRow = styled.div`
 `
 
 const SemiIndentedRow = styled.div`
-  padding: 1.5vw 2.5vw 0 2.5vw;
+  padding: 1.5vw 4vw 0;
 `
 
 const Row = styled.div`
