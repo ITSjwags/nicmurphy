@@ -76,7 +76,7 @@ const IndexPage = () => (
           Writer, Director
         </Description>
         <SemiIndentedRow>
-          <Description>
+          <DescriptionSmall>
             Premiered and Best of Fest at{' '}
             <LinkSmall
               href="https://videoart.net/this-fabulous-fucking-life/"
@@ -86,7 +86,7 @@ const IndexPage = () => (
               THE VIDEO ART AND EXPERIMENTAL FILM FESTIVAL
             </LinkSmall>{' '}
             NYC November 2019
-          </Description>
+          </DescriptionSmall>
         </SemiIndentedRow>
       </WorkBlock>
 
@@ -294,7 +294,7 @@ const Link = styled.a`
 const LinkSmall = styled.a`
   color: #0000ff;
   cursor: pointer;
-  font-size: 3.6vw;
+  font-size: 3vw;
 `
 
 const AlteredLink = styled(Link)`
@@ -317,12 +317,17 @@ const Description = styled.p`
   margin: 0;
 `
 
+const DescriptionSmall = styled.p`
+  font-size: 3vw;
+  margin: 0;
+`
+
 const IndentedRow = styled.div`
   padding: 5vw 2.5vw 0 2.5vw;
 `
 
 const SemiIndentedRow = styled.div`
-  padding: 1.5vw 4vw 0;
+  padding: 1.5vw 5vw 0;
 `
 
 const Row = styled.div`
