@@ -48,7 +48,7 @@ const IndexPage = () => (
         <Description>
           Live Experience, 2019
           <br />
-          Live Director and Stage Manager
+          Live Director, Stage Manager
         </Description>
         <SemiIndentedRow>
           <LinkSmall
