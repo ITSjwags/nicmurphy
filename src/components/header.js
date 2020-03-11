@@ -5,10 +5,11 @@ import arrowSrc from '../images/down-arrow.svg'
 const Header = () => (
   <Container>
     <Headline>Nic Murphy</Headline>
-    <Tagline>
+    <Subheadline>
       Writer
       <span>Multimedia Director</span>
-    </Tagline>
+    </Subheadline>
+    <Tagline>Organization Creativity Leadership</Tagline>
     <Links>
       <Link
         href="NicMurphyResume030920.pdf"
@@ -42,7 +43,7 @@ const Headline = styled.h1`
   text-transform: uppercase;
 `
 
-const Tagline = styled.p`
+const Subheadline = styled.p`
   font-size: 5vw;
   margin: 0;
   text-align: center;
@@ -50,6 +51,12 @@ const Tagline = styled.p`
   > span {
     margin-left: 6vw;
   }
+`
+
+const Tagline = styled.p`
+  font-size: 3.75vw;
+  margin: 5px 0 0 0;
+  text-align: center;
 `
 
 const Links = styled.section`
