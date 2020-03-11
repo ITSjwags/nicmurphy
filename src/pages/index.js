@@ -46,10 +46,19 @@ const IndexPage = () => (
           WOOLF AND THE WONDERSHOW PRESENTS: CAGES
         </Link>
         <Description>
-          Live Experience, 2019
+          Live Experience, 2019, 2020
           <br />
           Live Director, Stage Manager
         </Description>
+        <SemiIndentedRow>
+          <LinkSmall
+            href="https://www.latimes.com/entertainment-arts/story/2020-02-27/cages-show-los-angeles"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LA TIMES REVIEW
+          </LinkSmall>
+        </SemiIndentedRow>
         <SemiIndentedRow>
           <LinkSmall
             href="https://noproscenium.com/theres-nothing-quite-like-cages-nopro-notes-afac8c17074d"
@@ -57,6 +66,15 @@ const IndexPage = () => (
             rel="noopener noreferrer"
           >
             NO PROSCENIUM REVIEW
+          </LinkSmall>
+        </SemiIndentedRow>
+        <SemiIndentedRow>
+          <LinkSmall
+            href="https://www.haunting.net/cages-review/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HAUNTING REVIEW
           </LinkSmall>
         </SemiIndentedRow>
       </WorkBlock>
