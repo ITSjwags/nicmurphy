@@ -213,6 +213,25 @@ const IndexPage = () => (
       </WorkBlock>
 
       <WorkBlock>
+        <VideoWrapper>
+          <Video
+            src="https://player.vimeo.com/video/396110759"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </VideoWrapper>
+        <Title>LIVE ACTION SET PRESENTS: THE OAKEY FAMILY SUPPER CLUB</Title>
+        <Description>
+          Immersive Interactive Theater, 2019
+          <br />
+          Media Director
+        </Description>
+      </WorkBlock>
+
+      <WorkBlock>
         <Image src={bardoSrc} alt="BARDO ZSA ZSA" />
         <Row>
           <Title>BARDO ZSA ZSA</Title>
