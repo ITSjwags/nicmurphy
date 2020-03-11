@@ -124,6 +124,38 @@ const IndexPage = () => (
       <WorkBlock>
         <VideoWrapper>
           <Video
+            src="https://player.vimeo.com/video/296100637"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </VideoWrapper>
+        <SmallTitle>Usually I'm Very Supportive of Delusion</SmallTitle>
+        <Description>
+          Short Film, 2019
+          <br />
+          Director, Editor
+        </Description>
+        <SemiIndentedRow>
+          <DescriptionSmall>
+            Digital Premiere on{' '}
+            <LinkSmall
+              href="http://nobudge.com/main/usually-im-very-supportive-of-delusion"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NOBUDGE.COM
+            </LinkSmall>{' '}
+            February 18th 2020
+          </DescriptionSmall>
+        </SemiIndentedRow>
+      </WorkBlock>
+
+      <WorkBlock>
+        <VideoWrapper>
+          <Video
             src="https://player.vimeo.com/video/183558848"
             width="640"
             height="360"
@@ -335,6 +367,11 @@ const AlteredLink = styled(Link)`
 
 const Title = styled.h2`
   font-size: 4.8vw;
+  margin: 0 0 ${({ marginBottom }) => marginBottom || '1.5vw'} 0;
+`
+
+const SmallTitle = styled.h2`
+  font-size: 4.7vw;
   margin: 0 0 ${({ marginBottom }) => marginBottom || '1.5vw'} 0;
 `
 
