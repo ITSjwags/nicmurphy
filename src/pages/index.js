@@ -266,6 +266,12 @@ const IndexPage = () => (
               SCRIPT
             </AlteredLink>
           </Row>
+          <SemiIndentedRow>
+            <DescriptionSmall>
+              Remounted by popular demand at Public Assembly's first ever Encore
+              Show, December 13th 2019
+            </DescriptionSmall>
+          </SemiIndentedRow>
         </IndentedRow>
         <IndentedRow>
           <Subtitle marginBottom="0">LOIS LANE AND THE MEN OF STEEL</Subtitle>
