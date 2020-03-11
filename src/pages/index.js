@@ -192,6 +192,27 @@ const IndexPage = () => (
       </WorkBlock>
 
       <WorkBlock>
+        <VideoWrapper>
+          <Video
+            src="https://player.vimeo.com/video/389366789"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </VideoWrapper>
+        <Title>
+          CEASELESS FUN PRESENTS: EVERYONE AGREES IT'S ABOUT TO EXPLODE
+        </Title>
+        <Description>
+          Immersive Interactive Theater, 2020
+          <br />
+          Media Director, Associate Producer
+        </Description>
+      </WorkBlock>
+
+      <WorkBlock>
         <Image src={bardoSrc} alt="BARDO ZSA ZSA" />
         <Row>
           <Title>BARDO ZSA ZSA</Title>
