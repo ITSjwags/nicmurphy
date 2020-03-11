@@ -91,7 +91,7 @@ const IndexPage = () => (
         <Description>
           Short Film, 2019
           <br />
-          Writer, Director
+          Writer, Director, Editor
         </Description>
         <SemiIndentedRow>
           <DescriptionSmall>
@@ -104,6 +104,19 @@ const IndexPage = () => (
               THE VIDEO ART AND EXPERIMENTAL FILM FESTIVAL
             </LinkSmall>{' '}
             NYC November 2019
+          </DescriptionSmall>
+        </SemiIndentedRow>
+        <SemiIndentedRow>
+          <DescriptionSmall>
+            Digital Premiere on{' '}
+            <LinkSmall
+              href="http://nobudge.com/main/spice-islands"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NOBUDGE.COM
+            </LinkSmall>{' '}
+            January 8th 2020
           </DescriptionSmall>
         </SemiIndentedRow>
       </WorkBlock>
