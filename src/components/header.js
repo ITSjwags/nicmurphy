@@ -11,7 +11,7 @@ const Header = () => (
     </Tagline>
     <Links>
       <Link
-        href="Nic Murphy Resume.pdf"
+        href="NicMurphyResume030920.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
