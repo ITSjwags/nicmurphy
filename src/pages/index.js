@@ -168,7 +168,7 @@ const IndexPage = () => (
         <Description>
           Music Documentary, 2017
           <br />
-          Director, Camera
+          Director, Camera, Editor
         </Description>
       </WorkBlock>
 
@@ -187,7 +187,7 @@ const IndexPage = () => (
         <Description>
           Music Video, 2017
           <br />
-          Director, Camera
+          Director, Camera, Editor
         </Description>
       </WorkBlock>
 
