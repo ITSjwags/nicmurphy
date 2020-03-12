@@ -93,8 +93,8 @@ const Subheadline = styled.p`
 `
 
 const Tagline = styled.p`
-  font-size: 3.75vw;
-  margin: 5px 0 0 0;
+  font-size: 3.8vw;
+  margin: 3px 0 0 0;
   text-align: center;
 `
 
@@ -132,7 +132,7 @@ const Arrow = styled.img`
 `
 
 const Modal = styled.div`
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   color: #fff;
   font-size: 2.5vw;
   padding: 3vw;

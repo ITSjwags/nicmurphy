@@ -132,7 +132,7 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
-        <SmallTitle>Usually I'm Very Supportive of Delusion</SmallTitle>
+        <SmallTitle>USUALLY I'M VERY SUPPORTIVE OF DELUSION</SmallTitle>
         <Description>
           Short Film, 2019
           <br />
@@ -202,9 +202,13 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
-        <Title>
+        <Link
+          href="https://www.ceaselessfun.com/everyoneagrees"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           CEASELESS FUN PRESENTS: EVERYONE AGREES IT'S ABOUT TO EXPLODE
-        </Title>
+        </Link>
         <Description>
           Immersive Interactive Theater, 2020
           <br />
@@ -223,7 +227,13 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
-        <Title>LIVE ACTION SET PRESENTS: THE OAKEY FAMILY SUPPER CLUB</Title>
+        <Link
+          href="http://liveactionset.org/oakeyfamily"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIVE ACTION SET PRESENTS: THE OAKEY FAMILY SUPPER CLUB
+        </Link>
         <Description>
           Immersive Interactive Theater, 2019
           <br />
