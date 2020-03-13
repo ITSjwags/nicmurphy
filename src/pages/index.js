@@ -46,10 +46,19 @@ const IndexPage = () => (
           WOOLF AND THE WONDERSHOW PRESENTS: CAGES
         </Link>
         <Description>
-          Live Experience, 2019
+          Live Experience, 2019, 2020
           <br />
           Live Director, Stage Manager
         </Description>
+        <SemiIndentedRow>
+          <LinkSmall
+            href="https://www.latimes.com/entertainment-arts/story/2020-02-27/cages-show-los-angeles"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LA TIMES REVIEW
+          </LinkSmall>
+        </SemiIndentedRow>
         <SemiIndentedRow>
           <LinkSmall
             href="https://noproscenium.com/theres-nothing-quite-like-cages-nopro-notes-afac8c17074d"
@@ -57,6 +66,15 @@ const IndexPage = () => (
             rel="noopener noreferrer"
           >
             NO PROSCENIUM REVIEW
+          </LinkSmall>
+        </SemiIndentedRow>
+        <SemiIndentedRow>
+          <LinkSmall
+            href="https://www.haunting.net/cages-review/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HAUNTING REVIEW
           </LinkSmall>
         </SemiIndentedRow>
       </WorkBlock>
@@ -73,7 +91,7 @@ const IndexPage = () => (
         <Description>
           Short Film, 2019
           <br />
-          Writer, Director
+          Writer, Director, Editor
         </Description>
         <SemiIndentedRow>
           <DescriptionSmall>
@@ -86,6 +104,51 @@ const IndexPage = () => (
               THE VIDEO ART AND EXPERIMENTAL FILM FESTIVAL
             </LinkSmall>{' '}
             NYC November 2019
+          </DescriptionSmall>
+        </SemiIndentedRow>
+        <SemiIndentedRow>
+          <DescriptionSmall>
+            Digital Premiere on{' '}
+            <LinkSmall
+              href="http://nobudge.com/main/spice-islands"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NOBUDGE.COM
+            </LinkSmall>{' '}
+            January 8th 2020
+          </DescriptionSmall>
+        </SemiIndentedRow>
+      </WorkBlock>
+
+      <WorkBlock>
+        <VideoWrapper>
+          <Video
+            src="https://player.vimeo.com/video/296100637"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </VideoWrapper>
+        <SmallTitle>USUALLY I'M VERY SUPPORTIVE OF DELUSION</SmallTitle>
+        <Description>
+          Short Film, 2019
+          <br />
+          Director, Editor
+        </Description>
+        <SemiIndentedRow>
+          <DescriptionSmall>
+            Digital Premiere on{' '}
+            <LinkSmall
+              href="http://nobudge.com/main/usually-im-very-supportive-of-delusion"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NOBUDGE.COM
+            </LinkSmall>{' '}
+            February 18th 2020
           </DescriptionSmall>
         </SemiIndentedRow>
       </WorkBlock>
@@ -105,7 +168,7 @@ const IndexPage = () => (
         <Description>
           Music Documentary, 2017
           <br />
-          Director, Camera
+          Director, Camera, Editor
         </Description>
       </WorkBlock>
 
@@ -124,7 +187,57 @@ const IndexPage = () => (
         <Description>
           Music Video, 2017
           <br />
-          Director, Camera
+          Director, Camera, Editor
+        </Description>
+      </WorkBlock>
+
+      <WorkBlock>
+        <VideoWrapper>
+          <Video
+            src="https://player.vimeo.com/video/389366789"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </VideoWrapper>
+        <Link
+          href="https://www.ceaselessfun.com/everyoneagrees"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CEASELESS FUN PRESENTS: EVERYONE AGREES IT'S ABOUT TO EXPLODE
+        </Link>
+        <Description>
+          Immersive Interactive Theater, 2020
+          <br />
+          Media Director, Associate Producer
+        </Description>
+      </WorkBlock>
+
+      <WorkBlock>
+        <VideoWrapper>
+          <Video
+            src="https://player.vimeo.com/video/396110759"
+            width="640"
+            height="360"
+            frameBorder="0"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+          />
+        </VideoWrapper>
+        <Link
+          href="http://liveactionset.org/oakeyfamily"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LIVE ACTION SET PRESENTS: THE OAKEY FAMILY SUPPER CLUB
+        </Link>
+        <Description>
+          Immersive Interactive Theater, 2019
+          <br />
+          Media Director
         </Description>
       </WorkBlock>
 
@@ -163,6 +276,12 @@ const IndexPage = () => (
               SCRIPT
             </AlteredLink>
           </Row>
+          <SemiIndentedRow>
+            <DescriptionSmall>
+              Remounted by popular demand at Public Assembly's first ever Encore
+              Show, December 13th 2019
+            </DescriptionSmall>
+          </SemiIndentedRow>
         </IndentedRow>
         <IndentedRow>
           <Subtitle marginBottom="0">LOIS LANE AND THE MEN OF STEEL</Subtitle>
@@ -304,6 +423,11 @@ const AlteredLink = styled(Link)`
 
 const Title = styled.h2`
   font-size: 4.8vw;
+  margin: 0 0 ${({ marginBottom }) => marginBottom || '1.5vw'} 0;
+`
+
+const SmallTitle = styled.h2`
+  font-size: 4.7vw;
   margin: 0 0 ${({ marginBottom }) => marginBottom || '1.5vw'} 0;
 `
 
