@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import Header from '../components/header'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import seoKeywords from '../data/keywords'
+
 import spiceSrc from '../images/spice-islands.jpg'
 import bardoSrc from '../images/BardoFullCover_1.3.png'
 import publicSrc from '../images/public-assembly.png'
@@ -15,6 +18,8 @@ const IndexPage = () => (
       keywords={seoKeywords}
       description="Nic Murphy - Writer, Multimedia Director"
     />
+
+    <Header />
 
     <Content>
       <WorkBlock>
