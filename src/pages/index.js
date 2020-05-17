@@ -269,6 +269,30 @@ const IndexPage = () => (
         <Description>Founding Member, Photographer</Description>
         <IndentedRow>
           <Subtitle marginBottom="0">
+            THE ECO-SLOTH SLEEP SYSTEM BY GAIATECH
+          </Subtitle>
+          <Row>
+            <Description>
+              Radio Play, 2020
+              <br />
+              Writer, Director, Sound Editor
+            </Description>
+            <AlteredLink
+              href="PA Radio 1 - Interstitials Full.mp3"
+              target="_blank"
+            >
+              AUDIO
+            </AlteredLink>
+          </Row>
+          <SemiIndentedRow>
+            <DescriptionSmall>
+              Three segments from Public Assembly's first ever radio program
+              (created during quarantine)
+            </DescriptionSmall>
+          </SemiIndentedRow>
+        </IndentedRow>
+        <IndentedRow>
+          <Subtitle marginBottom="0">
             A TALE OF TWO FATHERS, WRITTEN WITH MY FATHER
           </Subtitle>
           <Row>
