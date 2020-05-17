@@ -19,27 +19,31 @@ const HeaderConsulting = () => {
         Creative
         <span>Consulting</span>
       </Subheadline>
+      <Tagline>
+        1st Meeting Free
+        <br />I Want to{' '}
+        <Link as="button" onClick={handleModalLinkClick}>
+          Help
+        </Link>{' '}
+        You
+      </Tagline>
+
+      <Contact href="mailto:nic@nicmurphy.com">nic@nicmurphy.com</Contact>
 
       {showModal && (
         <Modal>
           <Close onClick={handleModalLinkClick}>X</Close>
           <ModalContent>
-            I grew up north of Saint Paul, Minnesota and went to Wake Forest
-            University in North Carolina studying history, film, and theater.
-            <br />
-            <br />
-            Back to The Twin Cities for 3 years - production assisting,
-            shooting, and assistant directing music videos, short films, and
-            commercials.
-            <br />
-            <br />
-            Then Los Angeles, where I have spent the last 5 years full time
-            freelancing between writing, directing, producing, editing,
-            photography, and creative consulting.
-            <br />
-            <br />I am specifically interested in enthusiastic collaboration,
-            the leadership of positive community, and the boundaries between
-            reality/disreality/traditional/experimental.
+            Creative + Developmental:
+            <hr />
+            <span>Producer</span>
+            <span>Editor</span>
+            <span>Consultant</span>
+            <span>Manager</span>
+            <span>Doctor</span>
+            <span>Manifester</span>
+            <span>Enthusiast</span>
+            <span>Lubricant</span>
           </ModalContent>
         </Modal>
       )}
@@ -81,6 +85,29 @@ const Subheadline = styled.p`
   }
 `
 
+const Tagline = styled.p`
+  font-size: 3.6vw;
+  margin: 4vw 0 2vw 0;
+`
+
+const Link = styled.a`
+  background: transparent;
+  border: 0;
+  color: red;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+`
+
+const Contact = styled(Link)`
+  font-size: 8.3vw;
+`
+
 const Modal = styled.div`
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
@@ -108,8 +135,17 @@ const Close = styled.button`
 `
 
 const ModalContent = styled.p`
-  font-size: 3vw;
+  font-size: 6.2vw;
   padding: 1vw 6vw;
+
+  > span {
+    display: block;
+    font-size: 5.7vw;
+  }
+
+  > hr {
+    margin: 1vw 0;
+  }
 `
 
 export default HeaderConsulting
