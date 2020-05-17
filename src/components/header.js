@@ -21,7 +21,9 @@ const Header = () => {
         <span>Multimedia Director</span>
         <span>Editor</span>
       </Subheadline>
-      <Tagline>Organization Creativity Leadership</Tagline>
+      <Tagline>
+        Organization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creativity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leadership
+      </Tagline>
       <Consulting>
         <ConsultingLink to="consulting">
           CONSULTING
@@ -61,7 +63,7 @@ const Header = () => {
             University in North Carolina studying history, film, and theater.
             <br />
             <br />
-            Back to The Twin Cities for 3 years - production assisting,
+            Back to the Twin Cities for 3 years - production assisting,
             shooting, and assistant directing music videos, short films, and
             commercials.
             <br />
@@ -116,7 +118,7 @@ const Consulting = styled.div`
 const ConsultingLink = styled(GatsbyLink)`
   background: transparent;
   border: 0;
-  color: red;
+  color: var(--red);
   cursor: pointer;
   display: inline-block;
   font-size: 3.8vw;
@@ -131,7 +133,7 @@ const ConsultingLink = styled(GatsbyLink)`
 `
 
 const ConsultingSubLink = styled.p`
-  color: red;
+  color: var(--red);
   font-size: 1.85vw;
   margin: 0;
   padding-right: 1.8vw;
@@ -151,7 +153,7 @@ const Links = styled.section`
 const Link = styled.a`
   background: transparent;
   border: 0;
-  color: #0000ff;
+  color: var(--blue);
   cursor: pointer;
   display: inline-block;
   font-size: 7vw;

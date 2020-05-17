@@ -432,7 +432,7 @@ const Image = styled.img`
 `
 
 const Link = styled.a`
-  color: #0000ff;
+  color: var(--blue);
   cursor: pointer;
   display: inline-block;
   font-size: 4.8vw;
@@ -440,7 +440,7 @@ const Link = styled.a`
 `
 
 const LinkSmall = styled.a`
-  color: #0000ff;
+  color: var(--blue);
   cursor: pointer;
   font-size: 3vw;
 `

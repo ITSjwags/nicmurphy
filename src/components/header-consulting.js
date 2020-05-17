@@ -15,17 +15,14 @@ const HeaderConsulting = () => {
       <HeadlineContainer>
         <Headline to="/">Nic Murphy</Headline>
       </HeadlineContainer>
-      <Subheadline>
-        Creative
-        <span>Consulting</span>
-      </Subheadline>
+      <Subheadline>Creative Consulting</Subheadline>
       <Tagline>
-        1st Meeting Free
-        <br />I Want to{' '}
+        1st meeting free
+        <br />I want to{' '}
         <Link as="button" onClick={handleModalLinkClick}>
-          Help
+          HELP
         </Link>{' '}
-        You
+        you
       </Tagline>
 
       <Contact href="mailto:nic@nicmurphy.com">nic@nicmurphy.com</Contact>
@@ -63,7 +60,7 @@ const HeadlineContainer = styled.div`
 const Headline = styled(GatsbyLink)`
   background: transparent;
   border: 0;
-  color: #0000ff;
+  color: var(--blue);
   cursor: pointer;
   font-size: 14vw;
   line-height: 1;
@@ -76,24 +73,20 @@ const Headline = styled(GatsbyLink)`
 `
 
 const Subheadline = styled.p`
-  font-size: 7.5vw;
+  font-size: 5vw;
   margin: 0;
   text-align: center;
-
-  > span {
-    margin-left: 6vw;
-  }
 `
 
 const Tagline = styled.p`
-  font-size: 3.6vw;
-  margin: 4vw 0 2vw 0;
+  font-size: 3.5vw;
+  margin: 7vw 0 0 0;
 `
 
 const Link = styled.a`
   background: transparent;
   border: 0;
-  color: red;
+  color: var(--red);
   cursor: pointer;
   display: inline-block;
   padding: 0;
@@ -105,7 +98,7 @@ const Link = styled.a`
 `
 
 const Contact = styled(Link)`
-  font-size: 8.3vw;
+  font-size: 6vw;
 `
 
 const Modal = styled.div`

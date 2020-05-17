@@ -7,6 +7,11 @@ import TrumpMediaEvalItalic from '../fonts/trumpmediaeval-bolditalic-webfont.wof
 import TrumpMediaEvalItalic2 from '../fonts/trumpmediaeval-bolditalic-webfont.woff2'
 
 const Styles = createGlobalStyle`
+  :root {
+    --blue: #0000ff;
+    --red: #ff0000;
+  }
+
   html {
     box-sizing: border-box;
   }

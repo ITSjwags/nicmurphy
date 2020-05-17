@@ -20,172 +20,217 @@ const ConsultingPage = () => (
       <Title>What I Do:</Title>
       <Paragraph>
         Develop and edit structure, content and logistics of{' '}
-        <i>
+        <span>
           feature film scripts, TV scripts, short film scripts, art books and
           novels
-        </i>
+        </span>
       </Paragraph>
       <Paragraph>
         Produce and edit structure, content and logistics of realized{' '}
-        <i>feature films</i> and <i>short films</i>, both documentary and
-        narrative
+        <span>feature films</span> and <span>short films</span>, both
+        documentary and narrative
       </Paragraph>
       <Paragraph>
-        Strategize and manage <i>creative and personal brands</i> (with
+        Strategize and manage <span>creative and personal brands</span> (with
         realistic accountability and organization)
       </Paragraph>
       <Paragraph>
-        Produce <i>photo, video, social media, copy</i> and <i>design</i>{' '}
-        content for creative and personal brands
+        Produce <span>photo, video, social media, copy</span> and{' '}
+        <span>design</span> content for creative and personal brands
       </Paragraph>
       <Paragraph>
-        Develop, produce, and audio-edit <i>podcasts</i>
+        Develop, produce, and audio-edit <span>podcasts</span>
       </Paragraph>
       <Paragraph>
-        Consult on <i>apps</i> in development
+        Consult on <span>apps</span> in development
       </Paragraph>
       <Paragraph>
         Develop structure, content and logistics of{' '}
-        <i>live theater, streaming,</i> and <i>immersive events</i>
+        <span>live theater, streaming,</span> and <span>immersive events</span>
       </Paragraph>
       <Paragraph>
-        <i>Cast, direct</i> and maintain actors
+        <span>Cast, direct</span> and maintain actors
       </Paragraph>
       <Paragraph>
-        Lead, manage and maintain <i>large creative departments</i> (creative,
-        tech, props, wardrobe, hair makeup, music, stage management, front of
-        house)
+        Lead, manage and maintain <span>large creative departments</span>{' '}
+        (creative, tech, props, wardrobe, hair makeup, music, stage management,
+        front of house)
       </Paragraph>
 
       <Title>Where I've Done It:</Title>
       <ParagraphLoose>
-        <i>Film Scripts</i>
+        <span>Film Scripts</span>
         <br />
-        DEEPER CREATURES - Feature Film Script, Written by Sonny Valicenti
+        DEEPER CREATURES&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film
+        Script, Written by Sonny Valicenti
         <br />
-        LIBERTY - Feature Film Script, Written by Lucas Murphy
+        LIBERTY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film Script, Written
+        by Lucas Murphy
         <br />
-        OF ROYAL DESCENT - Feature Film Script, Written by Lucas Murphy
+        OF ROYAL DESCENT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film
+        Script, Written by Lucas Murphy
         <br />
-        ANTIETAM - Feature Film Script, Written by Matt Lacombe
+        ANTIETAM&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film Script,
+        Written by Matt Lacombe
         <br />
-        DEADBOLT - Feature Film Scripts, Written by Matt Lacombe
+        DEADBOLT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film Scripts,
+        Written by Matt Lacombe
         <br />
-        CHICKS DIG SCARS - Feature Film Script, Written by Joseph Sacks
+        CHICKS DIG SCARS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film
+        Script, Written by Joseph Sacks
         <br />
-        ESCAPE - Feature Film Script, Written by Sam Williams
+        ESCAPE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film Script, Written
+        by Sam Williams
       </ParagraphLoose>
       <ParagraphLoose>
-        DENOUEMENT - 1hr Pilot Script, Written by Lucas Murphy
+        DENOUEMENT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;1hr Pilot Script, Written
+        by Lucas Murphy
         <br />
-        SYNTHESIZER - 1hr Pilot Script, Written by Lucas Murphy
+        SYNTHESIZER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;1hr Pilot Script,
+        Written by Lucas Murphy
         <br />
-        BARDO ZSA ZSA - 1hr Pilot Script, Written by CB Murphy and myself
+        BARDO ZSA ZSA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;1hr Pilot Script,
+        Written by CB Murphy and myself
         <br />
-        PSYCHIC SCHOOL - 30m Pilot Script, Written by Jordana Lilly
+        PSYCHIC SCHOOL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;30m Pilot Script,
+        Written by Jordana Lilly
       </ParagraphLoose>
       <ParagraphLoose>
-        DICEY WANG - Short Film Script, Written by Kathy Meng
+        DICEY WANG&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film Script,
+        Written by Kathy Meng
         <br />
-        A LETTER - Short Film Script, Written by Greg Berman
+        A LETTER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film Script, Written
+        by Greg Berman
         <br />
-        PICTURES OF ME - Short Film Script, Written by Greg Berman
+        PICTURES OF ME&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film Script,
+        Written by Greg Berman
         <br />
-        LUCID A - Short Film Script, Written by Greg Berman
+        LUCID A&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film Script, Written
+        by Greg Berman
       </ParagraphLoose>
 
       <ParagraphLoose>
-        <i>Produced Features</i>
+        <span>Produced Features</span>
         <br />
-        NOW AND AGAIN - Feature Documentary, Dir. Alex Leff
+        NOW AND AGAIN&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Documentary,
+        Dir. Alex Leff
       </ParagraphLoose>
       <ParagraphLoose>
-        <i>Produced Short Films</i>
+        <span>Produced Short Films</span>
         <br />
-        SHE USED TO LAUGH - Short Film, Dir. Greg Berman
+        SHE USED TO LAUGH&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film, Dir.
+        Greg Berman
         <br />
-        CAPTAIN PHENOMENAL - Short Film, Dir. Jamie Lewis
+        CAPTAIN PHENOMENAL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film, Dir.
+        Jamie Lewis
         <br />
-        THE MASK IN OUR HANDS - Short Film, Dir. Joseph Sacks
+        THE MASK IN OUR HANDS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film,
+        Dir. Joseph Sacks
         <br />
-        MY BOYFRIEND'S DAUGHTER - Short Film, Dir. Kathy Meng
+        MY BOYFRIEND'S DAUGHTER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film,
+        Dir. Kathy Meng
         <br />
-        NANNY - Short Film, Dir. Kathy Meng
+        NANNY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film, Dir. Kathy Meng
         <br />
-        SPIRITS - Short Film, Dir. Robert Maisano
+        SPIRITS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film, Dir. Robert
+        Maisano
         <br />
-        IMPERMANENT COLLECTION - Short Film, Dir. Stefanie Toftey
+        IMPERMANENT COLLECTION&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Film,
+        Dir. Stefanie Toftey
         <br />
-        DAKOTA - Short Documentary, Dir. Derek Spencer
+        DAKOTA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Short Documentary, Dir. Derek
+        Spencer
       </ParagraphLoose>
       <ParagraphLoose>
-        <i>Live Experiences</i>
+        <span>Live Experiences</span>
         <br />
-        CAGES - Live Immersive Musical Experience, Dir. Ben Romans, CJ Barans,
+        CAGES&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Live Immersive Musical
+        Experience, Dir. Ben Romans, CJ Barans,
         <br />
         <Right>David Richardson, and myself</Right>
         <br />
-        GHOST COMMANDER - Streaming Interactive Experience, Dir. Lauren Liedel
+        GHOST COMMANDER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Streaming
+        Interactive Experience, Dir. Lauren Liedel
         <br />
-        ONE BRIEF MOMENT OF JOY - Live Interactive Experience, Dir. Lauren
-        Liedel <br />
-        BAR OF DREAMS - Live Interactive Experience, Dir. Jon Pedigo and Alex
-        Leff
+        ONE BRIEF MOMENT OF JOY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Live
+        Interactive Experience, Dir. Lauren Liedel <br />
+        BAR OF DREAMS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Live Interactive
+        Experience, Dir. Jon Pedigo and Alex Leff
         <br />
-        FIGMENT - Live Interactive Experience, Dir. Joanna Harmon
+        FIGMENT&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Live Interactive Experience,
+        Dir. Joanna Harmon
         <br />
-        NARCISSUS - Live Immersive Dance Experience , Dir. Sophia Stoller
+        NARCISSUS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Live Immersive Dance
+        Experience , Dir. Sophia Stoller
         <br />
-        THE SHOW ABOUT YOU - Live Comedy Experience, Dir. Greg Berman
+        THE SHOW ABOUT YOU&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Live Comedy
+        Experience, Dir. Greg Berman
       </ParagraphLoose>
       <ParagraphLoose>
-        <i>Novels</i>
+        <span>Novels</span>
         <br />
-        BARDO ZSA ZSA - Novel, Written by CB Murphy and myself
+        BARDO ZSA ZSA&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Novel, Written by CB
+        Murphy and myself
         <br />
-        BARDO JANE JANE - Novel, Written by CB Murphy
+        BARDO JANE JANE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Novel, Written by CB
+        Murphy
         <br />
-        BARDO III - Novel, Written by CB Murphy
+        BARDO III&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Novel, Written by CB
+        Murphy
         <br />
-        THE NINE LOVES OF KAT WERNER - Novel, Written by Lucas Murphy
+        THE NINE LOVES OF KAT WERNER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Novel,
+        Written by Lucas Murphy
       </ParagraphLoose>
       <ParagraphLoose>
-        <i>Art Books</i>
+        <span>Art Books</span>
         <br />
-        AND IN IT'S PLACE ANOTHER - Photography Book, By Kovi Konowieksi
+        AND IN IT'S PLACE
+        ANOTHER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Photography Book, By Kovi
+        Konowieksi
         <br />
-        EVERYDAY ALCHEMY - Visual Art Book, By Zoographico Press
+        EVERYDAY ALCHEMY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Visual Art Book, By
+        Zoographico Press
       </ParagraphLoose>
       <ParagraphLoose>
-        <i>Brands</i>
+        <span>Brands</span>
         <br />
-        CURIOUS AUDIO - Podcast Brand, Owned by Ari Andersen
+        CURIOUS AUDIO&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Podcast Brand, Owned
+        by Ari Andersen
         <br />
-        LIFETIME VIRTUAL COACHING - Lifestyle Service, Owned by Aaron Briggs
+        LIFETIME VIRTUAL COACHING&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Lifestyle
+        Service, Owned by Aaron Briggs
         <br />
-        CURIOUS JEWELER - Esty Brand, Owned by Amanda Kaschak
+        CURIOUS JEWELER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Esty Brand, Owned by
+        Amanda Kaschak
         <br />
-        LIVE ACTION SET - Interactive Theater Company, Owned by Joanna Harmon
+        LIVE ACTION SET&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Interactive Theater
+        Company, Owned by Joanna Harmon
         <Right>and Noah Bremer</Right>
         <br />
-        NEW GUARD - Theater Company, Owned by Matt Little and Nick Thurston
+        NEW GUARD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Theater Company, Owned by
+        Matt Little and Nick Thurston
         <br />
-        PUBLIC ASSEMBLY - Theater Company, Owned by Clara Aranovhich,
+        PUBLIC ASSEMBLY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Theater Company,
+        Owned by Clara Aranovhich,
         <Right>Satya Bhbha, Alex Mirecki, and Lindsey Garrett</Right>
         <br />
-        ZOOGRAPHICO PRESS - Creative Brand, Owned by CB Murphy
+        ZOOGRAPHICO PRESS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Creative Brand,
+        Owned by CB Murphy
       </ParagraphLoose>
       <ParagraphLoose>
-        BRAD CULVER ACTOR - Personal Brand
+        BRAD CULVER ACTOR&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Personal Brand
         <br />
-        JESSICA GARRISON WRITER - Personal Brand
+        JESSICA GARRISON WRITER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Personal
+        Brand
       </ParagraphLoose>
       <ParagraphLoose>
-        <i>Apps</i>
+        <span>Apps</span>
         <br />
-        PARTNER PLAY - Audio Experience App, Owned by Jonathan Wegener
+        PARTNER PLAY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Audio Experience App,
+        Owned by Jonathan Wegener
         <br />
-        VENTFUL - Calendar App, Owned by Peter Simpson
+        VENTFUL&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Calendar App, Owned by Peter
+        Simpson
       </ParagraphLoose>
     </Content>
   </Layout>
@@ -196,15 +241,19 @@ const Content = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 7vw;
+  font-size: 5vw;
   margin: 7vw 0 ${({ marginBottom }) => marginBottom || '0'} 0;
   text-decoration: underline;
 `
 
 const Paragraph = styled.p`
-  font-size: 2.4vw;
+  font-size: 2.3vw;
   line-height: 1.7;
   margin: 0 0 4vw 0;
+
+  > span {
+    color: var(--blue);
+  }
 `
 
 const ParagraphLoose = styled(Paragraph)`
@@ -212,6 +261,7 @@ const ParagraphLoose = styled(Paragraph)`
 `
 
 const Right = styled.span`
+  color: inherit !important;
   display: inline-block;
   text-align: right;
   width: 100%;
