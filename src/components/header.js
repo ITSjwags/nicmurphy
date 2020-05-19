@@ -105,14 +105,14 @@ const Subheadline = styled.p`
 `
 
 const Tagline = styled.p`
-  font-size: 3.4vw;
+  font-size: 2.9vw;
   margin: 3px 0 0 0;
   text-align: center;
 `
 
 const Consulting = styled.div`
   text-align: right;
-  margin: 2vw 0 -4vw 0;
+  margin: 2vw 0 -2vw 0;
 `
 
 const ConsultingLink = styled(GatsbyLink)`

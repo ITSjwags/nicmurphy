@@ -64,6 +64,9 @@ const ConsultingPage = () => (
         DEEPER CREATURES&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film
         Script, Written by Sonny Valicenti
         <br />
+        DIABOLIQUE&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film Script,
+        Written by Sonny Valicenti
+        <br />
         LIBERTY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Feature Film Script, Written
         by Lucas Murphy
         <br />
@@ -145,9 +148,7 @@ const ConsultingPage = () => (
         <span>Live Experiences</span>
         <br />
         CAGES&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Live Immersive Musical
-        Experience, Dir. Ben Romans, CJ Barans,
-        <br />
-        <Right>David Richardson, and myself</Right>
+        Experience, Dir. Ben Romans, CJ Baran, David Richardson, and myself
         <br />
         GHOST COMMANDER&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Streaming
         Interactive Experience, Dir. Lauren Liedel
@@ -204,15 +205,13 @@ const ConsultingPage = () => (
         Amanda Kaschak
         <br />
         LIVE ACTION SET&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Interactive Theater
-        Company, Owned by Joanna Harmon
-        <Right>and Noah Bremer</Right>
+        Company, Owned by Joanna Harmon and Noah Bremer
         <br />
         NEW GUARD&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Theater Company, Owned by
         Matt Little and Nick Thurston
         <br />
         PUBLIC ASSEMBLY&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Theater Company,
-        Owned by Clara Aranovhich,
-        <Right>Satya Bhbha, Alex Mirecki, and Lindsey Garrett</Right>
+        Owned by Clara Aranovich, Satya Bhbha, Alex Mirecki, and Lindsey Garrett
         <br />
         ZOOGRAPHICO PRESS&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;Creative Brand,
         Owned by CB Murphy
@@ -247,7 +246,7 @@ const Title = styled.h2`
 `
 
 const Paragraph = styled.p`
-  font-size: 2.3vw;
+  font-size: 2.25vw;
   line-height: 1.7;
   margin: 0 0 4vw 0;
 
@@ -258,13 +257,6 @@ const Paragraph = styled.p`
 
 const ParagraphLoose = styled(Paragraph)`
   line-height: 2;
-`
-
-const Right = styled.span`
-  color: inherit !important;
-  display: inline-block;
-  text-align: right;
-  width: 100%;
 `
 
 export default ConsultingPage
