@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { Link as GatsbyLink } from 'gatsby'
 import styled from 'styled-components'
+
 import arrowSrc from '../images/down-arrow.svg'
+import arrowRightSrc from '../images/right-arrow-red.svg'
 
 const Header = () => {
   const [showModal, toggleModal] = useState(false)
@@ -16,8 +19,19 @@ const Header = () => {
       <Subheadline>
         Writer
         <span>Multimedia Director</span>
+        <span>Editor</span>
       </Subheadline>
-      <Tagline>Organization Creativity Leadership</Tagline>
+      <Tagline>
+        Organization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creativity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leadership
+      </Tagline>
+      <Consulting>
+        <ConsultingLink to="/consulting">
+          CONSULTING
+          <ArrowRight src={arrowRightSrc} alt="arrow" />
+          <br />
+        </ConsultingLink>
+        <ConsultingSubLink>(do you need creative help?)</ConsultingSubLink>
+      </Consulting>
       <Links>
         <Link as="button" onClick={handleModalLinkClick}>
           Bio
@@ -45,24 +59,21 @@ const Header = () => {
         <Modal>
           <Close onClick={handleModalLinkClick}>X</Close>
           <ModalContent>
-            Nic Murphy grew up north of Saint Paul, Minnesota and went to Wake
-            Forest University in North Carolina studying history, film, and
-            theater.
+            I grew up north of Saint Paul, Minnesota and went to Wake Forest
+            University in North Carolina studying history, film, and theater.
             <br />
             <br />
-            Back to The Twin Cities for 3 years, crewing on music videos, short
-            films, and commercials.
+            Back to the Twin Cities for 3 years - crewing, shooting and
+            assistant directing on music videos, short films, and commercials.
             <br />
             <br />
-            Then Los Angeles, where he has spent the last 5 years full time
-            freelancing between directing, producing, consulting, editing, and
-            photography.
+            Then Los Angeles, where I have spent the last 5 years full time
+            freelancing between writing, directing, producing, editing,
+            photography, and creative consulting.
             <br />
-            <br />
-            He is most interested in the leadership of positive community, the
-            play between reality/disreality, gender + love in the 21st century,
-            and the connection between live immersive theater and classic
-            filmmaking.
+            <br />I am specifically interested in enthusiastic collaboration,
+            the leadership of positive community, and the boundaries between
+            reality/disreality/traditional/experimental.
           </ModalContent>
         </Modal>
       )}
@@ -83,7 +94,7 @@ const Headline = styled.h1`
 `
 
 const Subheadline = styled.p`
-  font-size: 5vw;
+  font-size: 4vw;
   margin: 0;
   text-align: center;
 
@@ -93,19 +104,55 @@ const Subheadline = styled.p`
 `
 
 const Tagline = styled.p`
-  font-size: 3.8vw;
+  font-size: 2.9vw;
   margin: 3px 0 0 0;
   text-align: center;
 `
 
+const Consulting = styled.div`
+  text-align: right;
+  margin: 2vw 0 -2vw 0;
+`
+
+const ConsultingLink = styled(GatsbyLink)`
+  background: transparent;
+  border: 0;
+  color: var(--red);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 3.8vw;
+  line-height: 1.2;
+  padding: 0;
+  text-align: right;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+`
+
+const ConsultingSubLink = styled.p`
+  color: var(--red);
+  font-size: 1.85vw;
+  margin: 0;
+  padding-right: 1.8vw;
+`
+
+const ArrowRight = styled.img`
+  margin-left: 1vw;
+  position: relative;
+  top: 0.5vw;
+  max-width: 3.5vw;
+`
+
 const Links = styled.section`
-  padding: 5vw 1vw;
+  padding: 0 1vw 5vw 1vw;
 `
 
 const Link = styled.a`
   background: transparent;
   border: 0;
-  color: #0000ff;
+  color: var(--blue);
   cursor: pointer;
   display: inline-block;
   font-size: 7vw;

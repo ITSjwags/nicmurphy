@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import Header from '../components/header'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import seoKeywords from '../data/keywords'
+
 import spiceSrc from '../images/spice-islands.jpg'
 import bardoSrc from '../images/BardoFullCover_1.3.png'
 import publicSrc from '../images/public-assembly.png'
@@ -15,6 +18,8 @@ const IndexPage = () => (
       keywords={seoKeywords}
       description="Nic Murphy - Writer, Multimedia Director"
     />
+
+    <Header />
 
     <Content>
       <WorkBlock>
@@ -264,6 +269,30 @@ const IndexPage = () => (
         <Description>Founding Member, Photographer</Description>
         <IndentedRow>
           <Subtitle marginBottom="0">
+            THE ECO-SLOTH SLEEP SYSTEM BY GAIATECH
+          </Subtitle>
+          <Row>
+            <Description>
+              Radio Play, 2020
+              <br />
+              Writer, Director, Sound Editor
+            </Description>
+            <AlteredLink
+              href="PA Radio 1 - Interstitials Full.mp3"
+              target="_blank"
+            >
+              AUDIO
+            </AlteredLink>
+          </Row>
+          <SemiIndentedRow>
+            <DescriptionSmall>
+              Three segments from Public Assembly's first ever radio program
+              (created during quarantine)
+            </DescriptionSmall>
+          </SemiIndentedRow>
+        </IndentedRow>
+        <IndentedRow>
+          <Subtitle marginBottom="0">
             A TALE OF TWO FATHERS, WRITTEN WITH MY FATHER
           </Subtitle>
           <Row>
@@ -403,7 +432,7 @@ const Image = styled.img`
 `
 
 const Link = styled.a`
-  color: #0000ff;
+  color: var(--blue);
   cursor: pointer;
   display: inline-block;
   font-size: 4.8vw;
@@ -411,7 +440,7 @@ const Link = styled.a`
 `
 
 const LinkSmall = styled.a`
-  color: #0000ff;
+  color: var(--blue);
   cursor: pointer;
   font-size: 3vw;
 `
