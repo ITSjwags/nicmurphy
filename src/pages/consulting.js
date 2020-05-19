@@ -17,7 +17,7 @@ const ConsultingPage = () => (
     <HeaderConsulting />
 
     <Content>
-      <Title>What I Do:</Title>
+      <Title>WHAT I DO</Title>
       <Paragraph>
         Develop and edit structure, content and logistics of{' '}
         <span>
@@ -57,7 +57,7 @@ const ConsultingPage = () => (
         front of house)
       </Paragraph>
 
-      <Title>Where I've Done It:</Title>
+      <Title>WHERE I DO IT</Title>
       <ParagraphLoose>
         <span>Film Scripts</span>
         <br />
@@ -240,9 +240,8 @@ const Content = styled.div`
 `
 
 const Title = styled.h2`
-  font-size: 5vw;
+  font-size: 4.5vw;
   margin: 7vw 0 ${({ marginBottom }) => marginBottom || '0'} 0;
-  text-decoration: underline;
 `
 
 const Paragraph = styled.p`

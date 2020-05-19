@@ -63,9 +63,8 @@ const Header = () => {
             University in North Carolina studying history, film, and theater.
             <br />
             <br />
-            Back to the Twin Cities for 3 years - production assisting,
-            shooting, and assistant directing music videos, short films, and
-            commercials.
+            Back to the Twin Cities for 3 years - crewing, shooting and
+            assistant directing on music videos, short films, and commercials.
             <br />
             <br />
             Then Los Angeles, where I have spent the last 5 years full time
