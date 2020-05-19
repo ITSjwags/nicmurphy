@@ -25,7 +25,7 @@ const Header = () => {
         Organization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creativity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leadership
       </Tagline>
       <Consulting>
-        <ConsultingLink to="consulting">
+        <ConsultingLink to="/consulting">
           CONSULTING
           <ArrowRight src={arrowRightSrc} alt="arrow" />
           <br />
