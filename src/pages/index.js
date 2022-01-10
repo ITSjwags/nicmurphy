@@ -9,14 +9,15 @@ import seoKeywords from '../data/keywords'
 import spiceSrc from '../images/spice-islands.jpg'
 import bardoSrc from '../images/BardoFullCover_1.3.png'
 import publicSrc from '../images/public-assembly.png'
-import ghostSrc from '../images/ghost-commander.png'
+import everyoneAgreesSrc from '../images/EVERYONE AGREES POSTER WIDE v1.2.jpg'
+import inCharacterSrc from '../images/InCharacterPhoto.jpg'
 
 const IndexPage = () => (
   <Layout>
     <SEO
       title="Nic Murphy"
       keywords={seoKeywords}
-      description="Nic Murphy - Writer, Multimedia Director"
+      description="Nic Murphy - Producer, Multimedia Director"
     />
 
     <Header />
@@ -127,6 +128,25 @@ const IndexPage = () => (
       </WorkBlock>
 
       <WorkBlock>
+        <Image src={inCharacterSrc} alt="CLOAK OF FICTION'S INCHARACTER" />
+        <Row>
+          <Link
+            href="http://cloakoffiction.com/incharacter"
+            rel="noopener noreferrer"
+            target="_blank"
+            smaller
+          >
+            CLOAK OF FICTION'S INCHARACTER
+          </Link>
+        </Row>
+        <Description>
+          TV Show, 2021+
+          <br />
+          Co-Creator, Film Director, Camera, Editor
+        </Description>
+      </WorkBlock>
+
+      <WorkBlock>
         <VideoWrapper>
           <Video
             src="https://player.vimeo.com/video/296100637"
@@ -178,19 +198,21 @@ const IndexPage = () => (
       </WorkBlock>
 
       <WorkBlock>
-        <VideoWrapper>
-          <Video
-            src="https://player.vimeo.com/video/210398140"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-          />
-        </VideoWrapper>
-        <Title>WAVES</Title>
+        <Image
+          src={everyoneAgreesSrc}
+          alt="EVERYONE AGREES IT'S ABOUT TO EXPLODE"
+        />
+        <Row>
+          <Link
+            href="https://cloakoffiction.com/everyoneagrees"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            EVERYONE AGREES IT'S ABOUT TO EXPLODE
+          </Link>
+        </Row>
         <Description>
-          Music Video, 2017
+          Theater Documentary, 2021
           <br />
           Director, Camera, Editor
         </Description>
@@ -199,7 +221,7 @@ const IndexPage = () => (
       <WorkBlock>
         <VideoWrapper>
           <Video
-            src="https://player.vimeo.com/video/389366789"
+            src="https://player.vimeo.com/video/363409664"
             width="640"
             height="360"
             frameBorder="0"
@@ -207,42 +229,11 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
-        <Link
-          href="https://www.ceaselessfun.com/everyoneagrees"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CEASELESS FUN PRESENTS: EVERYONE AGREES IT'S ABOUT TO EXPLODE
-        </Link>
+        <Title>CYCLE OF MEMORY</Title>
         <Description>
-          Immersive Interactive Theater, 2020
+          Feature, Documentary, 2021
           <br />
-          Media Director, Associate Producer
-        </Description>
-      </WorkBlock>
-
-      <WorkBlock>
-        <VideoWrapper>
-          <Video
-            src="https://player.vimeo.com/video/396110759"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-          />
-        </VideoWrapper>
-        <Link
-          href="http://liveactionset.org/oakeyfamily"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LIVE ACTION SET PRESENTS: THE OAKEY FAMILY SUPPER CLUB
-        </Link>
-        <Description>
-          Immersive Interactive Theater, 2019
-          <br />
-          Media Director
+          Co-Editor, Co-Producer
         </Description>
       </WorkBlock>
 
@@ -344,60 +335,6 @@ const IndexPage = () => (
           </Description>
         </IndentedRow>
       </WorkBlock>
-
-      <WorkBlock>
-        <Image src={ghostSrc} alt="GHOST COMMANDER" />
-        <Link
-          href="https://www.youtube.com/watch?v=SDeuJSRg1sE"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GHOST COMMANDER
-        </Link>
-        <Description>
-          Narrative Livestream, 2018
-          <br />
-          Assistant Director (dir. Lauren Liedel)
-        </Description>
-      </WorkBlock>
-
-      <WorkBlock>
-        <VideoWrapper>
-          <Video
-            src="https://player.vimeo.com/video/249440271"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-          />
-        </VideoWrapper>
-        <Subtitle>NEW GUARD THEATER COMPANY'S TARTUFFE</Subtitle>
-        <Description>
-          Proscenium Theater, 2017
-          <br />
-          Assistant Director (dir. Satya Bhabha)
-        </Description>
-      </WorkBlock>
-
-      <WorkBlock>
-        <VideoWrapper>
-          <Video
-            src="https://www.youtube.com/embed/Y6ueCFLkJdA"
-            width="640"
-            height="360"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-          />
-        </VideoWrapper>
-        <Title>RINGO - ATMOSPHERE</Title>
-        <Description>
-          Music Video, 2016
-          <br />
-          Assistant Director (dir. Ryan KRON Thompson)
-        </Description>
-      </WorkBlock>
     </Content>
   </Layout>
 )
@@ -435,7 +372,7 @@ const Link = styled.a`
   color: var(--blue);
   cursor: pointer;
   display: inline-block;
-  font-size: 4.8vw;
+  font-size: ${(props) => (props.smaller ? '4.6vw' : '4.8vw')};
   margin-bottom: 1.5vw;
 `
 

@@ -17,7 +17,7 @@ const Header = () => {
     <Container>
       <Headline>Nic Murphy</Headline>
       <Subheadline>
-        Writer
+        Producer
         <span>Multimedia Director</span>
         <span>Editor</span>
       </Subheadline>
@@ -38,11 +38,19 @@ const Header = () => {
         </Link>
         <br />
         <Link
-          href="NicMurphyResume030920.pdf"
+          href="NicMurphyResume010622.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
           Resume
+        </Link>
+        <br />
+        <Link
+          href="https://vimeo.com/nicmurphy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Vimeo
         </Link>
         <br />
         <Link href="https://www.instagram.com/nharrisonmurphy/">
@@ -67,7 +75,7 @@ const Header = () => {
             assistant directing on music videos, short films, and commercials.
             <br />
             <br />
-            Then Los Angeles, where I have spent the last 5 years full time
+            Then Los Angeles, where I have spent the last 6 years full time
             freelancing between writing, directing, producing, editing,
             photography, and creative consulting.
             <br />

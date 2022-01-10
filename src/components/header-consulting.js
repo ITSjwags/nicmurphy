@@ -16,6 +16,7 @@ const HeaderConsulting = () => {
         <Headline to="/">Nic Murphy</Headline>
       </HeadlineContainer>
       <Subheadline>Creative Consulting</Subheadline>
+      <Subheadline>Advice Accountability Enthusiasm</Subheadline>
       <Tagline>
         1st meeting free
         <br />I want to{' '}
