@@ -75,7 +75,7 @@ const Headline = styled(GatsbyLink)`
 
 const Subheadline = styled.p`
   font-size: 5vw;
-  margin: 0 0 ${({ marginBottom }) => (marginBottom ? '0.4vw' : '0')} 0;
+  margin: 0;
   text-align: center;
 `
 
