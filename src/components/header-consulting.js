@@ -15,7 +15,7 @@ const HeaderConsulting = () => {
       <HeadlineContainer>
         <Headline to="/">Nic Murphy</Headline>
       </HeadlineContainer>
-      <Subheadline marginBottom>Creative Consulting</Subheadline>
+      <Subheadline>Creative Consulting</Subheadline>
       <Subheadline>Advice Accountability Enthusiasm</Subheadline>
       <Tagline>
         1st meeting free
@@ -54,7 +54,7 @@ const Container = styled.header`
 `
 
 const HeadlineContainer = styled.div`
-  margin-bottom: 0.5vw;
+  margin-bottom: 1vw;
   text-align: center;
 `
 
@@ -63,7 +63,7 @@ const Headline = styled(GatsbyLink)`
   border: 0;
   color: var(--blue);
   cursor: pointer;
-  font-size: 2.5vw;
+  font-size: 14vw;
   line-height: 1;
   text-decoration: underline;
   text-transform: uppercase;
@@ -74,14 +74,14 @@ const Headline = styled(GatsbyLink)`
 `
 
 const Subheadline = styled.p`
-  font-size: 2.5vw;
+  font-size: 5vw;
   margin: 0 0 ${({ marginBottom }) => (marginBottom ? '0.4vw' : '0')} 0;
   text-align: center;
 `
 
 const Tagline = styled.p`
-  font-size: 2.5vw;
-  margin: 2vw 0 0 0;
+  font-size: 3.5vw;
+  margin: 7vw 0 0 0;
 `
 
 const Link = styled.a`
@@ -99,7 +99,7 @@ const Link = styled.a`
 `
 
 const Contact = styled(Link)`
-  font-size: 2.6vw;
+  font-size: 6vw;
 `
 
 const Modal = styled.div`

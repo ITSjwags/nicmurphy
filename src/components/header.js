@@ -58,14 +58,6 @@ const Header = () => {
         </Link>
         <br />
         <Link href="mailto:nic@nicmurphy.com">nic@nicmurphy.com</Link>
-        <br />
-        <Link
-          href="https://cloakoffiction.com/incharacter/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Cloak of Fiction
-        </Link>
       </Links>
       <Work>
         Work <Arrow src={arrowSrc} alt="arrow" />

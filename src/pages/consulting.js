@@ -316,7 +316,7 @@ const ConsultingPage = () => (
         &nbsp;&nbsp;-&nbsp;&nbsp;Photography Book, By Kovi Konowieksi
       </ParagraphLoose>
 
-      <Paragraph marginTop indented id="brands">
+      <Paragraph marginTop id="brands">
         Brands
       </Paragraph>
       <ParagraphLoose>
@@ -444,7 +444,7 @@ const Title = styled.h2`
 const Paragraph = styled.p`
   font-size: 2.5vw;
   line-height: 1.7;
-  margin-top: ${({ marginTop }) => (marginTop ? '6vw' : 0)};
+  margin-top: ${({ marginTop }) => (marginTop ? '6vw' : '2.5vw')};
   margin-left: ${({ indented }) => (indented ? '6vw' : 0)};
 
   > span {

@@ -10,6 +10,7 @@ import spiceSrc from '../images/spice-islands.jpg'
 import bardoSrc from '../images/BardoFullCover_1.3.png'
 import publicSrc from '../images/public-assembly.png'
 import everyoneAgreesSrc from '../images/EVERYONE AGREES POSTER WIDE v1.2.jpg'
+import inCharacterSrc from '../images/InCharacterPhoto.jpg'
 
 const IndexPage = () => (
   <Layout>
@@ -127,6 +128,25 @@ const IndexPage = () => (
       </WorkBlock>
 
       <WorkBlock>
+        <Image src={inCharacterSrc} alt="CLOAK OF FICTION'S INCHARACTER" />
+        <Row>
+          <Link
+            href="http://cloakoffiction.com/incharacter"
+            rel="noopener noreferrer"
+            target="_blank"
+            smaller
+          >
+            CLOAK OF FICTION'S INCHARACTER
+          </Link>
+        </Row>
+        <Description>
+          TV Show, 2021+
+          <br />
+          Co-Creator, Film Director, Camera, Editor
+        </Description>
+      </WorkBlock>
+
+      <WorkBlock>
         <VideoWrapper>
           <Video
             src="https://player.vimeo.com/video/296100637"
@@ -201,7 +221,7 @@ const IndexPage = () => (
       <WorkBlock>
         <VideoWrapper>
           <Video
-            src="https://vimeo.com/363409664"
+            src="https://player.vimeo.com/video/363409664"
             width="640"
             height="360"
             frameBorder="0"
@@ -352,7 +372,7 @@ const Link = styled.a`
   color: var(--blue);
   cursor: pointer;
   display: inline-block;
-  font-size: 4.8vw;
+  font-size: ${(props) => (props.smaller ? '4.6vw' : '4.8vw')};
   margin-bottom: 1.5vw;
 `
 
