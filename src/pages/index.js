@@ -116,7 +116,7 @@ const IndexPage = () => (
           <DescriptionSmall>
             Digital Premiere on{' '}
             <LinkSmall
-              href="http://nobudge.com/main/spice-islands"
+              href="https://www.nobudge.com/videos/spice-islands"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -167,7 +167,7 @@ const IndexPage = () => (
           <DescriptionSmall>
             Digital Premiere on{' '}
             <LinkSmall
-              href="http://nobudge.com/main/usually-im-very-supportive-of-delusion"
+              href="https://www.nobudge.com/videos/usually-im-very-supportive-of-delusion"
               target="_blank"
               rel="noopener noreferrer"
             >
