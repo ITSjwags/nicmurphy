@@ -38,7 +38,7 @@ const Header = () => {
         </Link>
         <br />
         <Link
-          href="NicMurphyResume010622.pdf"
+          href="NicMurphyResume072322.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -52,7 +52,7 @@ const IndexPage = () => (
           WOOLF AND THE WONDERSHOW PRESENTS: CAGES
         </Link>
         <Description>
-          Live Experience, 2019, 2020
+          Live Experience, 2019+
           <br />
           Live Director, Stage Manager
         </Description>
@@ -229,7 +229,13 @@ const IndexPage = () => (
             allowFullScreen
           />
         </VideoWrapper>
-        <Title>CYCLE OF MEMORY</Title>
+        <Link
+          href="https://cycleofmemory.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          CYCLE OF MEMORY
+        </Link>
         <Description>
           Feature, Documentary, 2021
           <br />
