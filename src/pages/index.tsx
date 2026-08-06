@@ -10,6 +10,7 @@ import everyoneAgreesSrc from '../images/EVERYONE AGREES POSTER WIDE v1.2.jpg'
 import inCharacterSrc from '../images/InCharacterPhoto.jpg'
 import publicSrc from '../images/public-assembly.png'
 import spiceSrc from '../images/spice-islands.jpg'
+import { vwCap } from '../utils/scale'
 
 const IndexPage = () => (
   <Layout>
@@ -347,16 +348,16 @@ export const Head = () => (
 )
 
 const Content = styled.div`
-  padding: 0 5vw;
+  padding: 0 ${vwCap(5)};
 `
 
 const WorkBlock = styled.div`
-  margin-bottom: 5vw;
+  margin-bottom: ${vwCap(5)};
 `
 
 const VideoWrapper = styled.div`
   height: 0;
-  margin-bottom: 3vw;
+  margin-bottom: ${vwCap(3)};
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
 `
@@ -371,7 +372,7 @@ const Video = styled.iframe`
 
 const Image = styled.img`
   display: block;
-  margin-bottom: 3vw;
+  margin-bottom: ${vwCap(3)};
   width: 100%;
 `
 
@@ -379,54 +380,54 @@ const Link = styled.a<{ $smaller?: boolean }>`
   color: var(--blue);
   cursor: pointer;
   display: inline-block;
-  font-size: ${(props) => (props.$smaller ? '4.6vw' : '4.8vw')};
-  margin-bottom: 1.5vw;
+  font-size: ${(props) => vwCap(props.$smaller ? 4.6 : 4.8)};
+  margin-bottom: ${vwCap(1.5)};
 `
 
 const LinkSmall = styled.a`
   color: var(--blue);
   cursor: pointer;
-  font-size: 3vw;
+  font-size: ${vwCap(3)};
 `
 
 const AlteredLink = styled(Link)`
   position: relative;
-  top: -5vw;
+  top: ${vwCap(-5)};
 `
 
 type MarginBottomProps = { $marginBottom?: string }
 
 const Title = styled.h2<MarginBottomProps>`
-  font-size: 4.8vw;
-  margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1.5vw'} 0;
+  font-size: ${vwCap(4.8)};
+  margin: 0 0 ${({ $marginBottom }) => $marginBottom || vwCap(1.5)} 0;
 `
 
 const SmallTitle = styled.h2<MarginBottomProps>`
-  font-size: 4.7vw;
-  margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1.5vw'} 0;
+  font-size: ${vwCap(4.7)};
+  margin: 0 0 ${({ $marginBottom }) => $marginBottom || vwCap(1.5)} 0;
 `
 
 const Subtitle = styled.h3<MarginBottomProps>`
-  font-size: 4.4vw;
-  margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1vw'} 0;
+  font-size: ${vwCap(4.4)};
+  margin: 0 0 ${({ $marginBottom }) => $marginBottom || vwCap(1)} 0;
 `
 
 const Description = styled.p`
-  font-size: 3.6vw;
+  font-size: ${vwCap(3.6)};
   margin: 0;
 `
 
 const DescriptionSmall = styled.p`
-  font-size: 3vw;
+  font-size: ${vwCap(3)};
   margin: 0;
 `
 
 const IndentedRow = styled.div`
-  padding: 5vw 2.5vw 0 2.5vw;
+  padding: ${vwCap(5)} ${vwCap(2.5)} 0 ${vwCap(2.5)};
 `
 
 const SemiIndentedRow = styled.div`
-  padding: 1.5vw 5vw 0;
+  padding: ${vwCap(1.5)} ${vwCap(5)} 0;
 `
 
 const Row = styled.div`

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import arrowSrc from '../images/down-arrow.svg'
 import arrowRightSrc from '../images/right-arrow-red.svg'
+import { vwCap } from '../utils/scale'
 
 const Header = () => {
   const [showModal, toggleModal] = useState(false)
@@ -90,11 +91,11 @@ const Header = () => {
 }
 
 const Container = styled.header`
-  padding: 2vw 4vw;
+  padding: ${vwCap(2)} ${vwCap(4)};
 `
 
 const Headline = styled.h1`
-  font-size: 14vw;
+  font-size: ${vwCap(14)};
   line-height: 1;
   margin: 0;
   text-align: center;
@@ -102,24 +103,24 @@ const Headline = styled.h1`
 `
 
 const Subheadline = styled.p`
-  font-size: 4vw;
+  font-size: ${vwCap(4)};
   margin: 0;
   text-align: center;
 
   > span {
-    margin-left: 6vw;
+    margin-left: ${vwCap(6)};
   }
 `
 
 const Tagline = styled.p`
-  font-size: 2.9vw;
+  font-size: ${vwCap(2.9)};
   margin: 3px 0 0 0;
   text-align: center;
 `
 
 const Consulting = styled.div`
   text-align: right;
-  margin: 2vw 0 -2vw 0;
+  margin: ${vwCap(2)} 0 ${vwCap(-2)} 0;
 `
 
 const ConsultingLink = styled(GatsbyLink)`
@@ -128,7 +129,7 @@ const ConsultingLink = styled(GatsbyLink)`
   color: var(--red);
   cursor: pointer;
   display: inline-block;
-  font-size: 3.8vw;
+  font-size: ${vwCap(3.8)};
   line-height: 1.2;
   padding: 0;
   text-align: right;
@@ -141,20 +142,20 @@ const ConsultingLink = styled(GatsbyLink)`
 
 const ConsultingSubLink = styled.p`
   color: var(--red);
-  font-size: 1.85vw;
+  font-size: ${vwCap(1.85)};
   margin: 0;
-  padding-right: 1.8vw;
+  padding-right: ${vwCap(1.8)};
 `
 
 const ArrowRight = styled.img`
-  margin-left: 1vw;
+  margin-left: ${vwCap(1)};
   position: relative;
-  top: 0.5vw;
-  max-width: 3.5vw;
+  top: ${vwCap(0.5)};
+  max-width: ${vwCap(3.5)};
 `
 
 const Links = styled.section`
-  padding: 0 1vw 5vw 1vw;
+  padding: 0 ${vwCap(1)} ${vwCap(5)} ${vwCap(1)};
 `
 
 const Link = styled.a`
@@ -163,7 +164,7 @@ const Link = styled.a`
   color: var(--blue);
   cursor: pointer;
   display: inline-block;
-  font-size: 7vw;
+  font-size: ${vwCap(7)};
   margin-bottom: 10px;
   padding: 0;
   text-decoration: underline;
@@ -174,14 +175,14 @@ const Link = styled.a`
 `
 
 const Work = styled.p`
-  font-size: 7vw;
+  font-size: ${vwCap(7)};
   margin: 0;
   text-align: right;
   text-transform: uppercase;
 `
 
 const Arrow = styled.img`
-  margin-left: -2.3vw;
+  margin-left: ${vwCap(-2.3)};
   width: 5%;
   max-width: 68px;
 `
@@ -189,12 +190,12 @@ const Arrow = styled.img`
 const Modal = styled.div`
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
-  font-size: 2.5vw;
-  padding: 3vw;
+  font-size: ${vwCap(2.5)};
+  padding: ${vwCap(3)};
   position: absolute;
-  top: 2vw;
-  right: 2vw;
-  left: 2vw;
+  top: ${vwCap(2)};
+  right: ${vwCap(2)};
+  left: ${vwCap(2)};
   z-index: 1;
 `
 
@@ -203,18 +204,18 @@ const Close = styled.button`
   border: 0;
   color: currentColor;
   cursor: pointer;
-  font-size: 6vw;
+  font-size: ${vwCap(6)};
   margin: 0;
   outline: 0;
   padding: 0;
   position: absolute;
-  top: 2vw;
-  left: 2vw;
+  top: ${vwCap(2)};
+  left: ${vwCap(2)};
 `
 
 const ModalContent = styled.p`
-  font-size: 3vw;
-  padding: 1vw 6vw;
+  font-size: ${vwCap(3)};
+  padding: ${vwCap(1)} ${vwCap(6)};
 `
 
 export default Header

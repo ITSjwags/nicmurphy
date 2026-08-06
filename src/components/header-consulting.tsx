@@ -2,6 +2,8 @@ import { Link as GatsbyLink } from 'gatsby'
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
+import { vwCap } from '../utils/scale'
+
 const HeaderConsulting = () => {
   const [showModal, toggleModal] = useState(false)
 
@@ -50,11 +52,11 @@ const HeaderConsulting = () => {
 }
 
 const Container = styled.header`
-  padding: 2vw 4vw;
+  padding: ${vwCap(2)} ${vwCap(4)};
 `
 
 const HeadlineContainer = styled.div`
-  margin-bottom: 1vw;
+  margin-bottom: ${vwCap(1)};
   text-align: center;
 `
 
@@ -63,7 +65,7 @@ const Headline = styled(GatsbyLink)`
   border: 0;
   color: var(--blue);
   cursor: pointer;
-  font-size: 14vw;
+  font-size: ${vwCap(14)};
   line-height: 1;
   text-decoration: underline;
   text-transform: uppercase;
@@ -74,14 +76,14 @@ const Headline = styled(GatsbyLink)`
 `
 
 const Subheadline = styled.p`
-  font-size: 5vw;
+  font-size: ${vwCap(5)};
   margin: 0;
   text-align: center;
 `
 
 const Tagline = styled.p`
-  font-size: 3.5vw;
-  margin: 7vw 0 0 0;
+  font-size: ${vwCap(3.5)};
+  margin: ${vwCap(7)} 0 0 0;
 `
 
 const Link = styled.a`
@@ -99,18 +101,18 @@ const Link = styled.a`
 `
 
 const Contact = styled(Link)`
-  font-size: 6vw;
+  font-size: ${vwCap(6)};
 `
 
 const Modal = styled.div`
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
-  font-size: 2.5vw;
-  padding: 3vw;
+  font-size: ${vwCap(2.5)};
+  padding: ${vwCap(3)};
   position: absolute;
-  top: 2vw;
-  right: 2vw;
-  left: 2vw;
+  top: ${vwCap(2)};
+  right: ${vwCap(2)};
+  left: ${vwCap(2)};
   z-index: 1;
 `
 
@@ -119,26 +121,26 @@ const Close = styled.button`
   border: 0;
   color: currentColor;
   cursor: pointer;
-  font-size: 6vw;
+  font-size: ${vwCap(6)};
   margin: 0;
   outline: 0;
   padding: 0;
   position: absolute;
-  top: 2vw;
-  left: 2vw;
+  top: ${vwCap(2)};
+  left: ${vwCap(2)};
 `
 
 const ModalContent = styled.p`
-  font-size: 6.2vw;
-  padding: 1vw 6vw;
+  font-size: ${vwCap(6.2)};
+  padding: ${vwCap(1)} ${vwCap(6)};
 
   > span {
     display: block;
-    font-size: 5.7vw;
+    font-size: ${vwCap(5.7)};
   }
 
   > hr {
-    margin: 1vw 0;
+    margin: ${vwCap(1)} 0;
   }
 `
 
