@@ -5,16 +5,10 @@
     "clientKind": "git",
     "useIgnoreFile": true
   },
-  "files": {
-    "ignoreUnknown": false
-  },
   "formatter": {
-    "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 2
+    "indentStyle": "space"
   },
   "linter": {
-    "enabled": true,
     "rules": {
       "preset": "recommended",
       "a11y": {

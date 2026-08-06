@@ -394,17 +394,19 @@ const AlteredLink = styled(Link)`
   top: -5vw;
 `
 
-const Title = styled.h2<{ $marginBottom?: string }>`
+type MarginBottomProps = { $marginBottom?: string }
+
+const Title = styled.h2<MarginBottomProps>`
   font-size: 4.8vw;
   margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1.5vw'} 0;
 `
 
-const SmallTitle = styled.h2<{ $marginBottom?: string }>`
+const SmallTitle = styled.h2<MarginBottomProps>`
   font-size: 4.7vw;
   margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1.5vw'} 0;
 `
 
-const Subtitle = styled.h3<{ $marginBottom?: string }>`
+const Subtitle = styled.h3<MarginBottomProps>`
   font-size: 4.4vw;
   margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1vw'} 0;
 `
