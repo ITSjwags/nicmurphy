@@ -1,6 +1,7 @@
-module.exports = {
+import type { GatsbyConfig } from 'gatsby'
+
+const config: GatsbyConfig = {
   plugins: [
-    'gatsby-plugin-react-helmet',
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
@@ -52,3 +53,5 @@ module.exports = {
     // "gatsby-plugin-offline",
   ],
 }
+
+export default config

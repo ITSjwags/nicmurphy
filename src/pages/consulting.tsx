@@ -3,17 +3,11 @@ import styled from 'styled-components'
 
 import HeaderConsulting from '../components/header-consulting'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
-import seoKeywords from '../data/keywords'
+import Seo from '../components/seo'
+import seoKeywords from '../data/keywords.json'
 
 const ConsultingPage = () => (
   <Layout>
-    <SEO
-      title="Nic Murphy - Consulting"
-      keywords={seoKeywords}
-      description="Nic Murphy - Writer, Multimedia Director"
-    />
-
     <HeaderConsulting />
 
     <Content>
@@ -188,7 +182,7 @@ const ConsultingPage = () => (
         </Link>
       </ParagraphLoose>
 
-      <Paragraph marginTop id="films">
+      <Paragraph $marginTop id="films">
         Produced Films
       </Paragraph>
       <ParagraphLoose>
@@ -270,7 +264,7 @@ const ConsultingPage = () => (
         &nbsp;&nbsp;-&nbsp;&nbsp;Spec Commercial, Dir. by Jessica Garrison
       </ParagraphLoose>
 
-      <Paragraph marginTop id="live">
+      <Paragraph $marginTop id="live">
         Live Experiences
       </Paragraph>
       <ParagraphLoose>
@@ -304,7 +298,7 @@ const ConsultingPage = () => (
         &nbsp;&nbsp;-&nbsp;&nbsp;Live Interactive Experience, Dir. Alex Leff
       </ParagraphLoose>
 
-      <Paragraph marginTop>Art Books</Paragraph>
+      <Paragraph $marginTop>Art Books</Paragraph>
       <ParagraphLoose>
         <Link
           href="https://deadbeatclubpress.com/products/kovi-konowiecki-and-in-its-place-another"
@@ -316,7 +310,7 @@ const ConsultingPage = () => (
         &nbsp;&nbsp;-&nbsp;&nbsp;Photography Book, By Kovi Konowieksi
       </ParagraphLoose>
 
-      <Paragraph marginTop id="brands">
+      <Paragraph $marginTop id="brands">
         Brands
       </Paragraph>
       <ParagraphLoose>
@@ -404,7 +398,7 @@ const ConsultingPage = () => (
         Hjelmeseth
       </ParagraphLoose>
 
-      <Paragraph marginTop id="apps">
+      <Paragraph $marginTop id="apps">
         Apps
       </Paragraph>
       <ParagraphLoose>
@@ -432,6 +426,14 @@ const ConsultingPage = () => (
   </Layout>
 )
 
+export const Head = () => (
+  <Seo
+    title="Nic Murphy - Consulting"
+    keywords={seoKeywords}
+    description="Nic Murphy - Writer, Multimedia Director"
+  />
+)
+
 const Content = styled.div`
   padding: 0 4vw;
 `
@@ -441,11 +443,11 @@ const Title = styled.h2`
   margin: 5vw 0 0 0;
 `
 
-const Paragraph = styled.p`
+const Paragraph = styled.p<{ $marginTop?: boolean; $indented?: boolean }>`
   font-size: 2.5vw;
   line-height: 1.7;
-  margin-top: ${({ marginTop }) => (marginTop ? '6vw' : '2.5vw')};
-  margin-left: ${({ indented }) => (indented ? '6vw' : 0)};
+  margin-top: ${({ $marginTop }) => ($marginTop ? '6vw' : '2.5vw')};
+  margin-left: ${({ $indented }) => ($indented ? '6vw' : 0)};
 
   > span {
     color: var(--blue);

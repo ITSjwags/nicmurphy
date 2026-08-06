@@ -3,23 +3,16 @@ import styled from 'styled-components'
 
 import Header from '../components/header'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
-import seoKeywords from '../data/keywords'
-
-import spiceSrc from '../images/spice-islands.jpg'
+import Seo from '../components/seo'
+import seoKeywords from '../data/keywords.json'
 import bardoSrc from '../images/BardoFullCover_1.3.png'
-import publicSrc from '../images/public-assembly.png'
 import everyoneAgreesSrc from '../images/EVERYONE AGREES POSTER WIDE v1.2.jpg'
 import inCharacterSrc from '../images/InCharacterPhoto.jpg'
+import publicSrc from '../images/public-assembly.png'
+import spiceSrc from '../images/spice-islands.jpg'
 
 const IndexPage = () => (
   <Layout>
-    <SEO
-      title="Nic Murphy"
-      keywords={seoKeywords}
-      description="Nic Murphy - Producer, Multimedia Director"
-    />
-
     <Header />
 
     <Content>
@@ -134,7 +127,7 @@ const IndexPage = () => (
             href="http://cloakoffiction.com/incharacter"
             rel="noopener noreferrer"
             target="_blank"
-            smaller
+            $smaller
           >
             CLOAK OF FICTION'S INCHARACTER
           </Link>
@@ -265,7 +258,7 @@ const IndexPage = () => (
         </Link>
         <Description>Founding Member, Photographer</Description>
         <IndentedRow>
-          <Subtitle marginBottom="0">
+          <Subtitle $marginBottom="0">
             THE ECO-SLOTH SLEEP SYSTEM BY GAIATECH
           </Subtitle>
           <Row>
@@ -289,7 +282,7 @@ const IndexPage = () => (
           </SemiIndentedRow>
         </IndentedRow>
         <IndentedRow>
-          <Subtitle marginBottom="0">
+          <Subtitle $marginBottom="0">
             A TALE OF TWO FATHERS, WRITTEN WITH MY FATHER
           </Subtitle>
           <Row>
@@ -310,7 +303,7 @@ const IndexPage = () => (
           </SemiIndentedRow>
         </IndentedRow>
         <IndentedRow>
-          <Subtitle marginBottom="0">LOIS LANE AND THE MEN OF STEEL</Subtitle>
+          <Subtitle $marginBottom="0">LOIS LANE AND THE MEN OF STEEL</Subtitle>
           <Row>
             <Description>
               Play, 2018
@@ -345,6 +338,14 @@ const IndexPage = () => (
   </Layout>
 )
 
+export const Head = () => (
+  <Seo
+    title="Nic Murphy"
+    keywords={seoKeywords}
+    description="Nic Murphy - Producer, Multimedia Director"
+  />
+)
+
 const Content = styled.div`
   padding: 0 5vw;
 `
@@ -374,11 +375,11 @@ const Image = styled.img`
   width: 100%;
 `
 
-const Link = styled.a`
+const Link = styled.a<{ $smaller?: boolean }>`
   color: var(--blue);
   cursor: pointer;
   display: inline-block;
-  font-size: ${(props) => (props.smaller ? '4.6vw' : '4.8vw')};
+  font-size: ${(props) => (props.$smaller ? '4.6vw' : '4.8vw')};
   margin-bottom: 1.5vw;
 `
 
@@ -393,19 +394,19 @@ const AlteredLink = styled(Link)`
   top: -5vw;
 `
 
-const Title = styled.h2`
+const Title = styled.h2<{ $marginBottom?: string }>`
   font-size: 4.8vw;
-  margin: 0 0 ${({ marginBottom }) => marginBottom || '1.5vw'} 0;
+  margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1.5vw'} 0;
 `
 
-const SmallTitle = styled.h2`
+const SmallTitle = styled.h2<{ $marginBottom?: string }>`
   font-size: 4.7vw;
-  margin: 0 0 ${({ marginBottom }) => marginBottom || '1.5vw'} 0;
+  margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1.5vw'} 0;
 `
 
-const Subtitle = styled.h3`
+const Subtitle = styled.h3<{ $marginBottom?: string }>`
   font-size: 4.4vw;
-  margin: 0 0 ${({ marginBottom }) => marginBottom || '1vw'} 0;
+  margin: 0 0 ${({ $marginBottom }) => $marginBottom || '1vw'} 0;
 `
 
 const Description = styled.p`
