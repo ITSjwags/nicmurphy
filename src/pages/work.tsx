@@ -66,8 +66,7 @@ export const Head = () => (
 )
 
 const FeaturedBlock = styled.div`
-  margin-bottom: ${vwCap(5)};
-  margin: 0 auto;
+  margin: 0 auto ${vwCap(5)};
   max-width: ${vwCap(65)};
 `
 

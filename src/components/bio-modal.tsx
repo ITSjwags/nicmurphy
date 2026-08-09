@@ -41,7 +41,7 @@ const BioModal = ({ label, children }: BioModalProps) => {
 
       {showModal && (
         <Modal role="dialog" aria-modal="true" aria-label={label}>
-          <Close ref={closeRef} onClick={handleClick}>
+          <Close ref={closeRef} onClick={handleClick} aria-label="Close bio">
             X
           </Close>
           <ModalContent>{children}</ModalContent>
