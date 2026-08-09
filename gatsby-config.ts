@@ -3,6 +3,8 @@ import type { GatsbyConfig } from 'gatsby'
 const config: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
