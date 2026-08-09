@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import videographyData from '../../content/videography.json'
 import BackLink from '../components/back-link'
 import Layout from '../components/layout'
 import {
@@ -15,29 +15,7 @@ import VideoEmbed from '../components/video-embed'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
 
-const categories = [
-  'Live Event',
-  'Live Theater',
-  'Promo Video',
-  'Live Music',
-  'Brand Video',
-  'Doc Style Music Video',
-]
-
-const works = [
-  {
-    src: 'https://player.vimeo.com/video/1188692154?h=8190e903f3',
-  },
-  {
-    src: 'https://player.vimeo.com/video/955313324',
-  },
-  { src: 'https://player.vimeo.com/video/932355557' },
-  { src: 'https://player.vimeo.com/video/1069388085' },
-  { src: 'https://player.vimeo.com/video/1174155985?h=0368281ba8' },
-  { src: 'https://player.vimeo.com/video/890146386' },
-  { src: 'https://player.vimeo.com/video/210398140' },
-  { src: 'https://player.vimeo.com/video/750766072' },
-]
+const { categories, works } = videographyData
 
 const VideographyPage = () => (
   <Layout>

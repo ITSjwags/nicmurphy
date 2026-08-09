@@ -1,2 +1,8 @@
 [build.environment]
   NODE_VERSION = "24"
+  # Gatsby's Parallel Query Running spawns one worker per CPU by default,
+  # which was crashing the build in Netlify's container ("Worker exited
+  # before finishing task") while processing the photography hero image —
+  # capping worker count is the documented workaround for this class of
+  # memory-related PQR crash.
+  GATSBY_CPU_COUNT = "1"

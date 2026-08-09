@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import creditsData from '../../content/credits.json'
 import BackLink from '../components/back-link'
 import Layout from '../components/layout'
 import Link from '../components/link'
 import { BackRow, PageContent, Title } from '../components/page-header'
 import Seo from '../components/seo'
 import VideoEmbed from '../components/video-embed'
-import credits from '../data/credits'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
+
+const { credits } = creditsData
 
 const featured = [
   { src: 'https://player.vimeo.com/video/370975104' },

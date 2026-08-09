@@ -1,9 +1,12 @@
 import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import bioData from '../../content/bio.json'
 import { pageContentStyles, vwCap } from '../utils/scale'
 import BioModal from './bio-modal'
 import Link, { linkStyles } from './link'
+
+const { bio } = bioData
 
 const Header = () => (
   <Container>
@@ -64,17 +67,17 @@ const Header = () => (
       </div>
       <RightColumn>
         <BioModal label="Bio">
-          I am based in Los Angeles, where I've spent the last 9 years full time
-          directing, producing, writing, editing, podcasting, taking photos, and
-          creative consulting.
-          <br />
-          <br />
-          In late 2022, I joined Misfit as Head of Production (Film, Theater,
-          Commerce) and as of 2026, I am the Artistic Director of Public
-          Assembly Theater Company.
-          <br />
-          <br />I believe in leading large & complicated teams with honesty,
-          organization, enthusiasm, and creativity.
+          {bio.map((paragraph, index) => (
+            <React.Fragment key={paragraph}>
+              {index > 0 && (
+                <>
+                  <br />
+                  <br />
+                </>
+              )}
+              {paragraph}
+            </React.Fragment>
+          ))}
         </BioModal>
         <br />
         <RowLink href="mailto:nic@nicmurphy.com">Email</RowLink>

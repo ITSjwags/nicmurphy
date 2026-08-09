@@ -1,0 +1,75 @@
+backend:
+  name: git-gateway
+  # TODO: switch to master once this branch merges — pointed at the feature
+  # branch for now since master doesn't have this CMS setup yet.
+  branch: feat/site-restructure
+
+local_backend: true
+
+media_folder: "src/images/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "credits"
+    label: "Work Credits"
+    files:
+      - name: "credits"
+        label: "Credits List"
+        file: "content/credits.json"
+        fields:
+          - label: "Credits"
+            name: "credits"
+            widget: "list"
+            summary: "{{fields.role}} — {{fields.title}}"
+            fields:
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Link (optional)", name: "href", widget: "string", required: false }
+
+  - name: "videography"
+    label: "Videography"
+    files:
+      - name: "videography"
+        label: "Videography Content"
+        file: "content/videography.json"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            field: { label: "Category", name: "category", widget: "string" }
+          - label: "Videos"
+            name: "works"
+            widget: "list"
+            summary: "{{fields.src}}"
+            fields:
+              - { label: "Vimeo Embed URL", name: "src", widget: "string" }
+
+  - name: "photography"
+    label: "Photography"
+    files:
+      - name: "photography"
+        label: "Photography Content"
+        file: "content/photography.json"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "href", widget: "string" }
+          - label: "Hero Image"
+            name: "heroImage"
+            widget: "image"
+
+  - name: "bio"
+    label: "Bio"
+    files:
+      - name: "bio"
+        label: "Bio Text"
+        file: "content/bio.json"
+        fields:
+          - label: "Paragraphs"
+            name: "bio"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
