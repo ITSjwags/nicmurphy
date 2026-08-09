@@ -13,9 +13,9 @@ const VideoEmbed = ({ src, label }: VideoEmbedProps) => (
     {src ? (
       <Video
         src={src}
+        title={label || 'Video embed'}
         width="640"
         height="360"
-        frameBorder="0"
         allow="autoplay; fullscreen"
         allowFullScreen
         loading="lazy"
@@ -34,6 +34,7 @@ const VideoWrapper = styled.div`
 `
 
 const Video = styled.iframe`
+  border: 0;
   height: 100%;
   left: 0;
   position: absolute;

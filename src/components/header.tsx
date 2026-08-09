@@ -25,24 +25,32 @@ const Header = () => (
     </Row>
 
     <CurrentRoles>
-      <strong>Artistic Director</strong> at{' '}
-      <Link
+      <strong>Artistic Director</strong> <Lowercase>at</Lowercase>{' '}
+      <RoleAnchor
         href="https://www.instagram.com/thepublicassembly/"
         target="_blank"
         rel="noopener noreferrer"
       >
         Public Assembly Theater Co.
-      </Link>
+      </RoleAnchor>
       <br />
-      <strong>Head of Production</strong> at{' '}
-      <Link href="https://misfit.co/" target="_blank" rel="noopener noreferrer">
+      <strong>Head of Production</strong> <Lowercase>at</Lowercase>{' '}
+      <RoleAnchor
+        href="https://misfit.co/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Misfit
-      </Link>
+      </RoleAnchor>
     </CurrentRoles>
 
     <Row>
       <div>
-        <RowLink href="https://www.instagram.com/nharrisonmurphy/">
+        <RowLink
+          href="https://www.instagram.com/nharrisonmurphy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Instagram
         </RowLink>
         <br />
@@ -54,7 +62,7 @@ const Header = () => (
           Vimeo
         </RowLink>
       </div>
-      <div>
+      <RightColumn>
         <BioModal label="Bio">
           I am based in Los Angeles, where I've spent the last 9 years full time
           directing, producing, writing, editing, podcasting, taking photos, and
@@ -69,21 +77,22 @@ const Header = () => (
           organization, enthusiasm, and creativity.
         </BioModal>
         <br />
-        <RowLink href="mailto:nic@nicmurphy.com">nic@nicmurphy.com</RowLink>
-      </div>
+        <RowLink href="mailto:nic@nicmurphy.com">Email</RowLink>
+      </RightColumn>
     </Row>
   </Container>
 )
 
 const Container = styled.header`
   ${pageContentStyles}
-  padding: ${vwCap(2)} ${vwCap(4)};
+  padding: ${vwCap(2)} ${vwCap(2)};
 `
 
 const Headline = styled.h1`
   font-size: ${vwCap(14)};
   line-height: 1;
   margin: 0;
+  margin-bottom: ${vwCap(2)};
   text-align: center;
   text-transform: uppercase;
 `
@@ -91,41 +100,58 @@ const Headline = styled.h1`
 const RoleLink = styled(GatsbyLink)`
   ${linkStyles}
   display: block;
-  font-size: ${vwCap(4)};
+  font-size: ${vwCap(3.3)};
   margin: 0;
   text-align: center;
+  text-transform: uppercase;
 `
 
 const Genres = styled.p`
-  font-size: ${vwCap(2.9)};
+  font-size: ${vwCap(2.5)};
   font-weight: bold;
   margin: ${vwCap(1)} 0 0 0;
   text-align: center;
 `
 
 const Tagline = styled.p`
-  font-size: ${vwCap(2.9)};
+  font-size: ${vwCap(2.2)};
   font-style: italic;
-  margin: 3px 0 0 0;
+  margin: ${vwCap(1)} 0 0 0;
   text-align: center;
+  text-transform: uppercase;
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: ${vwCap(5)};
+  margin-top: ${vwCap(6)};
 `
 
 const NavLink = styled(GatsbyLink)`
   ${linkStyles}
   display: inline-block;
   font-size: ${vwCap(4)};
+  text-transform: uppercase;
 `
 
 const CurrentRoles = styled.p`
-  font-size: ${vwCap(2.5)};
-  margin: ${vwCap(3)} 0 0 0;
+  color: var(--red);
+  font-size: ${vwCap(3.2)};
+  margin: ${vwCap(6)} 0 0 0;
   text-align: center;
+  text-transform: uppercase;
+`
+
+const Lowercase = styled.span`
+  text-transform: lowercase;
+`
+
+const RoleAnchor = styled(Link)`
+  color: var(--red);
+`
+
+const RightColumn = styled.div`
+  text-align: right;
 `
 
 const RowLink = styled(Link)`
@@ -135,6 +161,7 @@ const RowLink = styled(Link)`
   font-size: ${vwCap(4)};
   margin-bottom: 10px;
   padding: 0;
+  text-transform: uppercase;
 `
 
 export default Header

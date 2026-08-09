@@ -10,6 +10,6 @@ const StyledBackLink = styled(GatsbyLink)`
   font-size: ${vwCap(3)};
 `
 
-const BackLink = () => <StyledBackLink to="/">BACK!</StyledBackLink>
+const BackLink = () => <StyledBackLink to="/">BACK</StyledBackLink>
 
 export default BackLink

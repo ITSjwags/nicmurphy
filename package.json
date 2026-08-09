@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "typecheck": "tsc --noEmit",
-    "lint": "biome check --write ."
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.3.0",

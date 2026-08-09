@@ -5,7 +5,7 @@ import HeaderConsulting from '../components/header-consulting'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import seoKeywords from '../data/keywords.json'
-import { vwCap } from '../utils/scale'
+import { pageContentStyles, vwCap } from '../utils/scale'
 
 const ConsultingPage = () => (
   <Layout>
@@ -436,6 +436,7 @@ export const Head = () => (
 )
 
 const Content = styled.div`
+  ${pageContentStyles}
   padding: 0 ${vwCap(4)};
 `
 
@@ -444,11 +445,10 @@ const Title = styled.h2`
   margin: ${vwCap(5)} 0 0 0;
 `
 
-const Paragraph = styled.p<{ $marginTop?: boolean; $indented?: boolean }>`
+const Paragraph = styled.p<{ $marginTop?: boolean }>`
   font-size: ${vwCap(2.5)};
   line-height: 1.7;
   margin-top: ${({ $marginTop }) => vwCap($marginTop ? 6 : 2.5)};
-  margin-left: ${({ $indented }) => ($indented ? vwCap(6) : 0)};
 
   > span {
     color: var(--blue);

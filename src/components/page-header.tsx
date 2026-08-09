@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
-import { vwCap } from '../utils/scale'
+import { pageContentStyles, vwCap } from '../utils/scale'
 
-export const Title = styled.h1<{ $align?: 'left' | 'center' }>`
-  font-size: ${vwCap(4.8)};
-  margin: ${vwCap(2)} 0 0 0;
-  text-align: ${({ $align }) => $align || 'center'};
+export const PageContent = styled.div`
+  ${pageContentStyles}
+  padding: 0 ${vwCap(5)};
+`
+
+export const Title = styled.h1`
+  font-size: ${vwCap(5.3)};
+  margin: 0 0 ${vwCap(2)} 0;
+  text-align: center;
   text-transform: uppercase;
 `
 
@@ -15,6 +20,7 @@ export const BackRow = styled.div`
 `
 
 export const Tagline = styled.p`
+  color: var(--red);
   font-size: ${vwCap(3)};
   font-weight: bold;
   margin: 0;
@@ -23,8 +29,9 @@ export const Tagline = styled.p`
 `
 
 export const SubTagline = styled.p`
-  font-size: ${vwCap(2.9)};
+  font-size: ${vwCap(1.9)};
   font-style: italic;
   margin: ${vwCap(1)} 0 ${vwCap(4)} 0;
   text-align: center;
+  text-transform: uppercase;
 `

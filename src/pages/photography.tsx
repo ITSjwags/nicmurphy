@@ -5,10 +5,16 @@ import styled from 'styled-components'
 import BackLink from '../components/back-link'
 import Layout from '../components/layout'
 import Link from '../components/link'
-import { BackRow, SubTagline, Tagline, Title } from '../components/page-header'
+import {
+  BackRow,
+  PageContent,
+  SubTagline,
+  Tagline,
+  Title,
+} from '../components/page-header'
 import Seo from '../components/seo'
 import seoKeywords from '../data/keywords.json'
-import { pageContentStyles, vwCap } from '../utils/scale'
+import { vwCap } from '../utils/scale'
 
 // Category-to-folder order is inferred positionally, not confirmed — check with Nic before launch.
 const categories = [
@@ -36,11 +42,11 @@ const categories = [
 
 const PhotographyPage = () => (
   <Layout>
-    <Content>
-      <Title>Photography</Title>
+    <PageContent>
       <BackRow>
         <BackLink />
       </BackRow>
+      <Title>Photography</Title>
 
       <Tagline>
         Warm&nbsp;&nbsp;Unique&nbsp;&nbsp;Reliable&nbsp;&nbsp;Easy to Work With
@@ -71,7 +77,7 @@ const PhotographyPage = () => (
           layout="fullWidth"
         />
       </HeroImageWrapper>
-    </Content>
+    </PageContent>
   </Layout>
 )
 
@@ -83,29 +89,28 @@ export const Head = () => (
   />
 )
 
-const Content = styled.div`
-  ${pageContentStyles}
-  padding: 0 ${vwCap(5)};
-`
-
 const HeroImageWrapper = styled.div`
   margin: ${vwCap(5)} 0;
 `
 
 const PortfolioLabel = styled.h2`
-  font-size: ${vwCap(3.5)};
-  margin: 0 0 ${vwCap(2)} 0;
+  font-size: ${vwCap(2.5)};
+  margin: 0 0 ${vwCap(1)} 0;
+  text-transform: uppercase;
+  text-align: center;
 `
 
 const CategoryList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 `
 
 const CategoryItem = styled.li`
   font-size: ${vwCap(3)};
   line-height: 1.7;
+  text-transform: uppercase;
 `
 
 export default PhotographyPage

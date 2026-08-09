@@ -14,7 +14,6 @@ const Seo = ({ title, description = '', keywords = [] }: SeoProps) => (
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:creator" content="@charleybmurphy" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     {keywords.length > 0 && (

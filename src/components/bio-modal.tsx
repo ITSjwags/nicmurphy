@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { vwCap } from '../utils/scale'
 import { linkStyles } from './link'
@@ -10,21 +10,40 @@ type BioModalProps = {
 
 const BioModal = ({ label, children }: BioModalProps) => {
   const [showModal, toggleModal] = useState(false)
+  const triggerRef = useRef<HTMLButtonElement>(null)
+  const closeRef = useRef<HTMLButtonElement>(null)
 
   const handleClick = () => {
-    if (window !== undefined) window.scrollTo(0, 0)
-    toggleModal(!showModal)
+    toggleModal((current) => !current)
   }
+
+  useEffect(() => {
+    if (!showModal) return
+
+    closeRef.current?.focus()
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') toggleModal(false)
+    }
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      triggerRef.current?.focus()
+    }
+  }, [showModal])
 
   return (
     <>
-      <Trigger type="button" onClick={handleClick}>
+      <Trigger ref={triggerRef} type="button" onClick={handleClick}>
         {label}
       </Trigger>
 
       {showModal && (
-        <Modal>
-          <Close onClick={handleClick}>X</Close>
+        <Modal role="dialog" aria-modal="true" aria-label={label}>
+          <Close ref={closeRef} onClick={handleClick}>
+            X
+          </Close>
           <ModalContent>{children}</ModalContent>
         </Modal>
       )}
@@ -40,6 +59,7 @@ const Trigger = styled.button`
   font-size: ${vwCap(4)};
   margin-bottom: 10px;
   padding: 0;
+  text-transform: uppercase;
 `
 
 const Modal = styled.div`
@@ -47,7 +67,7 @@ const Modal = styled.div`
   color: #fff;
   font-size: ${vwCap(2.5)};
   padding: ${vwCap(3)};
-  position: absolute;
+  position: fixed;
   top: ${vwCap(2)};
   right: ${vwCap(2)};
   left: ${vwCap(2)};
@@ -61,11 +81,14 @@ const Close = styled.button`
   cursor: pointer;
   font-size: ${vwCap(6)};
   margin: 0;
-  outline: 0;
   padding: 0;
   position: absolute;
   top: ${vwCap(2)};
   left: ${vwCap(2)};
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+  }
 `
 
 const ModalContent = styled.p`
