@@ -95,11 +95,12 @@ const PhotographyPage = ({ data }: PhotographyPageProps) => {
   )
 }
 
-export const Head = () => (
+export const Head = ({ location }: { location: { pathname: string } }) => (
   <Seo
     title="Nic Murphy - Photography"
     keywords={seoKeywords}
     description="Nic Murphy - Photography, warm and reliable capturing the beautiful, ethnographic essence in still form"
+    pathname={location.pathname}
   />
 )
 

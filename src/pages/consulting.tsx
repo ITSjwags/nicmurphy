@@ -427,11 +427,12 @@ const ConsultingPage = () => (
   </Layout>
 )
 
-export const Head = () => (
+export const Head = ({ location }: { location: { pathname: string } }) => (
   <Seo
     title="Nic Murphy - Consulting"
     keywords={seoKeywords}
     description="Nic Murphy - Writer, Multimedia Director"
+    pathname={location.pathname}
   />
 )
 

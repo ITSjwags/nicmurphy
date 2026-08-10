@@ -25,6 +25,7 @@ export const query = graphql`
     allDatoCmsVideographyWork(sort: [{ position: ASC }]) {
       nodes {
         id
+        title
         src
       }
     }
@@ -33,6 +34,7 @@ export const query = graphql`
 
 type Work = {
   id: string
+  title: string
   src: string
 }
 
@@ -78,7 +80,7 @@ const VideographyPage = ({ data }: VideographyPageProps) => {
         <WorksGrid>
           {works.map((work) => (
             <div key={work.id}>
-              <VideoEmbed src={work.src} />
+              <VideoEmbed src={work.src} label={work.title} />
             </div>
           ))}
         </WorksGrid>
@@ -87,11 +89,12 @@ const VideographyPage = ({ data }: VideographyPageProps) => {
   )
 }
 
-export const Head = () => (
+export const Head = ({ location }: { location: { pathname: string } }) => (
   <Seo
     title="Nic Murphy - Videography"
     keywords={seoKeywords}
     description="Nic Murphy - Videography, warm and reliable doc style capturing the beautiful, ethnographic essence in moving form"
+    pathname={location.pathname}
   />
 )
 

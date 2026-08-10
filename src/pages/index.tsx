@@ -11,11 +11,12 @@ const IndexPage = () => (
   </Layout>
 )
 
-export const Head = () => (
+export const Head = ({ location }: { location: { pathname: string } }) => (
   <Seo
     title="Nic Murphy"
     keywords={seoKeywords}
     description="Nic Murphy - Multimedia Director, Editor, Producer, Writer"
+    pathname={location.pathname}
   />
 )
 

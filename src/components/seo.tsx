@@ -5,6 +5,7 @@ type SeoProps = {
   title?: string
   description?: string
   keywords?: string[]
+  pathname?: string
 }
 
 type FaviconTag = {
@@ -13,6 +14,11 @@ type FaviconTag = {
 }
 
 type GlobalSeoQuery = {
+  site: {
+    siteMetadata: {
+      siteUrl: string
+    }
+  }
   datoCmsSite: {
     globalSeo: {
       siteName: string | null
@@ -29,9 +35,14 @@ type GlobalSeoQuery = {
   }
 }
 
-const Seo = ({ title, description, keywords = [] }: SeoProps) => {
+const Seo = ({ title, description, keywords = [], pathname }: SeoProps) => {
   const data = useStaticQuery<GlobalSeoQuery>(graphql`
     query GlobalSeo {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
       datoCmsSite {
         globalSeo {
           siteName
@@ -53,10 +64,14 @@ const Seo = ({ title, description, keywords = [] }: SeoProps) => {
   const resolvedDescription =
     description ?? globalSeo?.fallbackSeo?.description ?? ''
   const twitterCard = globalSeo?.fallbackSeo?.twitterCard ?? 'summary'
+  const canonicalUrl = pathname
+    ? `${data.site.siteMetadata.siteUrl}${pathname}`
+    : undefined
 
   return (
     <>
       <title>{resolvedTitle}</title>
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       <meta name="description" content={resolvedDescription} />
       <meta property="og:title" content={resolvedTitle} />
       <meta property="og:description" content={resolvedDescription} />

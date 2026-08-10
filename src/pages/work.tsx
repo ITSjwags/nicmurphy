@@ -10,18 +10,15 @@ import VideoEmbed from '../components/video-embed'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
 
-const featured = [
-  { src: 'https://player.vimeo.com/video/370975104' },
-  { src: 'https://player.vimeo.com/video/286266479' },
-  {
-    src: 'https://player.vimeo.com/video/1143973952?h=88d64c53c6',
-  },
-  { src: 'https://player.vimeo.com/video/1070896800' },
-  { src: 'https://player.vimeo.com/video/932355557' },
-]
-
 export const query = graphql`
   query WorkCredits {
+    allDatoCmsFeaturedWork(sort: [{ position: ASC }]) {
+      nodes {
+        id
+        title
+        src
+      }
+    }
     allDatoCmsCredit(sort: [{ position: ASC }]) {
       nodes {
         role
@@ -32,6 +29,12 @@ export const query = graphql`
   }
 `
 
+type FeaturedWork = {
+  id: string
+  title: string
+  src: string
+}
+
 type Credit = {
   role: string
   title: string
@@ -40,6 +43,9 @@ type Credit = {
 
 type WorkPageProps = {
   data: {
+    allDatoCmsFeaturedWork: {
+      nodes: FeaturedWork[]
+    }
     allDatoCmsCredit: {
       nodes: Credit[]
     }
@@ -47,6 +53,7 @@ type WorkPageProps = {
 }
 
 const WorkPage = ({ data }: WorkPageProps) => {
+  const featured = data.allDatoCmsFeaturedWork.nodes
   const credits = data.allDatoCmsCredit.nodes
 
   return (
@@ -57,9 +64,9 @@ const WorkPage = ({ data }: WorkPageProps) => {
         </BackRow>
         <Title>Multimedia Director, Editor, Producer, Writer</Title>
 
-        {featured.map((item, index: number) => (
-          <FeaturedBlock key={index.toString()}>
-            <VideoEmbed src={item.src} />
+        {featured.map((item) => (
+          <FeaturedBlock key={item.id}>
+            <VideoEmbed src={item.src} label={item.title} />
           </FeaturedBlock>
         ))}
 
@@ -86,11 +93,12 @@ const WorkPage = ({ data }: WorkPageProps) => {
   )
 }
 
-export const Head = () => (
+export const Head = ({ location }: { location: { pathname: string } }) => (
   <Seo
     title="Nic Murphy - Work"
     keywords={seoKeywords}
     description="Nic Murphy - Multimedia Director, Editor, Producer, Writer"
+    pathname={location.pathname}
   />
 )
 
