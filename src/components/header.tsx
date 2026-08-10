@@ -75,7 +75,8 @@ const Header = () => {
         <RightColumn>
           <BioModal label="Bio">
             {bio.map((paragraph, index) => (
-              <React.Fragment key={paragraph}>
+              // biome-ignore lint/suspicious/noArrayIndexKey: paragraphs come from one deterministic split of a single CMS field, never reordered
+              <React.Fragment key={index}>
                 {index > 0 && (
                   <>
                     <br />
