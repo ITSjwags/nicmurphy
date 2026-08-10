@@ -8,6 +8,7 @@ const config: GatsbyConfig = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-datocms',
