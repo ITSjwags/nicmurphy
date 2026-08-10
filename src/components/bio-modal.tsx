@@ -71,6 +71,7 @@ const Modal = styled.div`
   top: ${vwCap(2)};
   right: ${vwCap(2)};
   left: ${vwCap(2)};
+  text-align: left;
   z-index: 1;
 `
 
