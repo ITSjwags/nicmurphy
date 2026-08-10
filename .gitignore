@@ -53,10 +53,15 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.local
+.env.*.local
 
 # gatsby files
 .cache/
 public
+
+# Scratch scripts (one-off cma:script file-mode scripts, etc.)
+tmp/
 
 # Mac files
 .DS_Store

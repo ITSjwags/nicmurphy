@@ -1,6 +1,6 @@
+import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import creditsData from '../../content/credits.json'
 import BackLink from '../components/back-link'
 import Layout from '../components/layout'
 import Link from '../components/link'
@@ -9,8 +9,6 @@ import Seo from '../components/seo'
 import VideoEmbed from '../components/video-embed'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
-
-const { credits } = creditsData
 
 const featured = [
   { src: 'https://player.vimeo.com/video/370975104' },
@@ -22,41 +20,71 @@ const featured = [
   { src: 'https://player.vimeo.com/video/932355557' },
 ]
 
-const WorkPage = () => (
-  <Layout>
-    <PageContent>
-      <BackRow>
-        <BackLink />
-      </BackRow>
-      <Title>Multimedia Director, Editor, Producer, Writer</Title>
+export const query = graphql`
+  query WorkCredits {
+    allDatoCmsCredit(sort: [{ position: ASC }]) {
+      nodes {
+        role
+        title
+        href
+      }
+    }
+  }
+`
 
-      {featured.map((item, index: number) => (
-        <FeaturedBlock key={index.toString()}>
-          <VideoEmbed src={item.src} />
-        </FeaturedBlock>
-      ))}
+type Credit = {
+  role: string
+  title: string
+  href: string
+}
 
-      <CreditList>
-        {credits.map((credit) => (
-          <CreditItem key={`${credit.role}-${credit.title}`}>
-            <strong>{credit.role}</strong> -{' '}
-            {credit.href ? (
-              <Link
-                href={credit.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {credit.title}
-              </Link>
-            ) : (
-              credit.title
-            )}
-          </CreditItem>
+type WorkPageProps = {
+  data: {
+    allDatoCmsCredit: {
+      nodes: Credit[]
+    }
+  }
+}
+
+const WorkPage = ({ data }: WorkPageProps) => {
+  const credits = data.allDatoCmsCredit.nodes
+
+  return (
+    <Layout>
+      <PageContent>
+        <BackRow>
+          <BackLink />
+        </BackRow>
+        <Title>Multimedia Director, Editor, Producer, Writer</Title>
+
+        {featured.map((item, index: number) => (
+          <FeaturedBlock key={index.toString()}>
+            <VideoEmbed src={item.src} />
+          </FeaturedBlock>
         ))}
-      </CreditList>
-    </PageContent>
-  </Layout>
-)
+
+        <CreditList>
+          {credits.map((credit) => (
+            <CreditItem key={`${credit.role}-${credit.title}`}>
+              <strong>{credit.role}</strong> -{' '}
+              {credit.href ? (
+                <Link
+                  href={credit.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {credit.title}
+                </Link>
+              ) : (
+                credit.title
+              )}
+            </CreditItem>
+          ))}
+        </CreditList>
+      </PageContent>
+    </Layout>
+  )
+}
 
 export const Head = () => (
   <Seo

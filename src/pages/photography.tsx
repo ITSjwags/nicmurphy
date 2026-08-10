@@ -1,8 +1,7 @@
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage, type ImageDataLike } from 'gatsby-plugin-image'
+import { GatsbyImage, type IGatsbyImageData } from 'gatsby-plugin-image'
 import React from 'react'
 import styled from 'styled-components'
-import photographyData from '../../content/photography.json'
 import BackLink from '../components/back-link'
 import Layout from '../components/layout'
 import Link from '../components/link'
@@ -17,17 +16,18 @@ import Seo from '../components/seo'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
 
-const { categories, heroImage } = photographyData
-const heroImageFileName = heroImage.split('/').pop()
-
 export const query = graphql`
-  query PhotographyHeroImage {
-    allFile(filter: { sourceInstanceName: { eq: "uploads" } }) {
+  query PhotographyPage {
+    datoCmsPhotographyPage {
+      heroImage {
+        alt
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+    }
+    allDatoCmsPhotographyCategory(sort: [{ position: ASC }]) {
       nodes {
-        base
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
+        label
+        href
       }
     }
   }
@@ -35,17 +35,21 @@ export const query = graphql`
 
 type PhotographyPageProps = {
   data: {
-    allFile: {
-      nodes: (ImageDataLike & { base: string })[]
+    datoCmsPhotographyPage: {
+      heroImage: {
+        alt: string | null
+        gatsbyImageData: IGatsbyImageData
+      }
+    }
+    allDatoCmsPhotographyCategory: {
+      nodes: { label: string; href: string }[]
     }
   }
 }
 
 const PhotographyPage = ({ data }: PhotographyPageProps) => {
-  const heroImageNode = data.allFile.nodes.find(
-    (node) => node.base === heroImageFileName
-  )
-  const heroImageData = heroImageNode && getImage(heroImageNode)
+  const { heroImage } = data.datoCmsPhotographyPage
+  const categories = data.allDatoCmsPhotographyCategory.nodes
 
   return (
     <Layout>
@@ -78,11 +82,11 @@ const PhotographyPage = ({ data }: PhotographyPageProps) => {
           ))}
         </CategoryList>
 
-        {heroImageData && (
+        {heroImage && (
           <HeroImageWrapper>
             <GatsbyImage
-              image={heroImageData}
-              alt="Selected photography by Nic Murphy"
+              image={heroImage.gatsbyImageData}
+              alt={heroImage.alt ?? 'Selected photography by Nic Murphy'}
             />
           </HeroImageWrapper>
         )}

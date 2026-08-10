@@ -1,19 +1,18 @@
 import type { GatsbyConfig } from 'gatsby'
 
+require('dotenv').config()
+
 const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: 'https://nicmurphy.com',
   },
   plugins: [
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     'gatsby-plugin-image',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-source-datocms',
       options: {
-        name: 'uploads',
-        path: `${__dirname}/src/images/uploads`,
+        apiToken: process.env.DATOCMS_API_TOKEN,
       },
     },
     {
@@ -28,12 +27,7 @@ const config: GatsbyConfig = {
         icon: 'src/images/favicon.png',
       },
     },
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        excludes: ['/admin/', '/admin/**'],
-      },
-    },
+    'gatsby-plugin-sitemap',
   ],
 }
 

@@ -1,6 +1,6 @@
+import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import videographyData from '../../content/videography.json'
 import BackLink from '../components/back-link'
 import Layout from '../components/layout'
 import {
@@ -15,40 +15,77 @@ import VideoEmbed from '../components/video-embed'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
 
-const { categories, works } = videographyData
+export const query = graphql`
+  query VideographyPage {
+    allDatoCmsVideographyCategory(sort: [{ position: ASC }]) {
+      nodes {
+        name
+      }
+    }
+    allDatoCmsVideographyWork(sort: [{ position: ASC }]) {
+      nodes {
+        id
+        src
+      }
+    }
+  }
+`
 
-const VideographyPage = () => (
-  <Layout>
-    <PageContent>
-      <BackRow>
-        <BackLink />
-      </BackRow>
-      <Title>Videography</Title>
+type Work = {
+  id: string
+  src: string
+}
 
-      <Tagline>
-        Warm&nbsp;&nbsp;Unique&nbsp;&nbsp;Reliable&nbsp;&nbsp;Low Impact Doc
-        Style
-      </Tagline>
-      <SubTagline>
-        Capturing the beautiful, ethnographic essence in moving form
-      </SubTagline>
+type VideographyPageProps = {
+  data: {
+    allDatoCmsVideographyCategory: {
+      nodes: { name: string }[]
+    }
+    allDatoCmsVideographyWork: {
+      nodes: Work[]
+    }
+  }
+}
 
-      <CategoryGrid>
-        {categories.map((category) => (
-          <Category key={category}>{category}</Category>
-        ))}
-      </CategoryGrid>
+const VideographyPage = ({ data }: VideographyPageProps) => {
+  const categories = data.allDatoCmsVideographyCategory.nodes.map(
+    (node) => node.name
+  )
+  const works = data.allDatoCmsVideographyWork.nodes
 
-      <WorksGrid>
-        {works.map((work, index) => (
-          <div key={index.toString()}>
-            <VideoEmbed src={work.src} />
-          </div>
-        ))}
-      </WorksGrid>
-    </PageContent>
-  </Layout>
-)
+  return (
+    <Layout>
+      <PageContent>
+        <BackRow>
+          <BackLink />
+        </BackRow>
+        <Title>Videography</Title>
+
+        <Tagline>
+          Warm&nbsp;&nbsp;Unique&nbsp;&nbsp;Reliable&nbsp;&nbsp;Low Impact Doc
+          Style
+        </Tagline>
+        <SubTagline>
+          Capturing the beautiful, ethnographic essence in moving form
+        </SubTagline>
+
+        <CategoryGrid>
+          {categories.map((category) => (
+            <Category key={category}>{category}</Category>
+          ))}
+        </CategoryGrid>
+
+        <WorksGrid>
+          {works.map((work) => (
+            <div key={work.id}>
+              <VideoEmbed src={work.src} />
+            </div>
+          ))}
+        </WorksGrid>
+      </PageContent>
+    </Layout>
+  )
+}
 
 export const Head = () => (
   <Seo

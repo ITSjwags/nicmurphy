@@ -1,90 +1,98 @@
-import { Link as GatsbyLink } from 'gatsby'
+import { Link as GatsbyLink, graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
-import bioData from '../../content/bio.json'
 import { pageContentStyles, vwCap } from '../utils/scale'
 import BioModal from './bio-modal'
 import Link, { linkStyles } from './link'
 
-const { bio } = bioData
+const Header = () => {
+  const data = useStaticQuery<{ datoCmsBio: { text: string } }>(graphql`
+    query BioText {
+      datoCmsBio {
+        text
+      }
+    }
+  `)
+  const bio = data.datoCmsBio.text.split('\n\n')
 
-const Header = () => (
-  <Container>
-    <Headline>Nic Murphy</Headline>
-    <RoleLink to="/work">
-      Multimedia Director, Editor, Producer, Writer
-    </RoleLink>
-    <Genres>
-      Theater, Film, Photos, Documentary, Podcast, Live Events, Immersive
-      Activations
-    </Genres>
-    <Tagline>
-      Leadership&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creativity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enthusiasm
-    </Tagline>
+  return (
+    <Container>
+      <Headline>Nic Murphy</Headline>
+      <RoleLink to="/work">
+        Multimedia Director, Editor, Producer, Writer
+      </RoleLink>
+      <Genres>
+        Theater - Film - Photos - Documentary - Podcast - Live Events -
+        Immersive Activations
+      </Genres>
+      <Tagline>
+        Leadership&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creativity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enthusiasm
+      </Tagline>
 
-    <Row>
-      <NavLink to="/photography">Photography</NavLink>
-      <NavLink to="/videography">Videography</NavLink>
-    </Row>
+      <Row>
+        <NavLink to="/photography">Photography</NavLink>
+        <NavLink to="/videography">Videography</NavLink>
+      </Row>
 
-    <CurrentRoles>
-      <strong>Artistic Director</strong> <Lowercase>at</Lowercase>{' '}
-      <RoleAnchor
-        href="https://www.instagram.com/thepublicassembly/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Public Assembly Theater Co.
-      </RoleAnchor>
-      <br />
-      <strong>Head of Production</strong> <Lowercase>at</Lowercase>{' '}
-      <RoleAnchor
-        href="https://misfit.co/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Misfit
-      </RoleAnchor>
-    </CurrentRoles>
-
-    <Row>
-      <div>
-        <RowLink
-          href="https://www.instagram.com/nharrisonmurphy/"
+      <CurrentRoles>
+        <strong>Artistic Director</strong> <Lowercase>at</Lowercase>{' '}
+        <RoleAnchor
+          href="https://www.instagram.com/thepublicassembly/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Instagram
-        </RowLink>
+          Public Assembly Theater Co.
+        </RoleAnchor>
         <br />
-        <RowLink
-          href="https://vimeo.com/nicmurphy"
+        <strong>Head of Production</strong> <Lowercase>at</Lowercase>{' '}
+        <RoleAnchor
+          href="https://misfit.co/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Vimeo
-        </RowLink>
-      </div>
-      <RightColumn>
-        <BioModal label="Bio">
-          {bio.map((paragraph, index) => (
-            <React.Fragment key={paragraph}>
-              {index > 0 && (
-                <>
-                  <br />
-                  <br />
-                </>
-              )}
-              {paragraph}
-            </React.Fragment>
-          ))}
-        </BioModal>
-        <br />
-        <RowLink href="mailto:nic@nicmurphy.com">Email</RowLink>
-      </RightColumn>
-    </Row>
-  </Container>
-)
+          Misfit
+        </RoleAnchor>
+      </CurrentRoles>
+
+      <Row>
+        <div>
+          <RowLink
+            href="https://www.instagram.com/nharrisonmurphy/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </RowLink>
+          <br />
+          <RowLink
+            href="https://vimeo.com/nicmurphy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vimeo
+          </RowLink>
+        </div>
+        <RightColumn>
+          <BioModal label="Bio">
+            {bio.map((paragraph, index) => (
+              <React.Fragment key={paragraph}>
+                {index > 0 && (
+                  <>
+                    <br />
+                    <br />
+                  </>
+                )}
+                {paragraph}
+              </React.Fragment>
+            ))}
+          </BioModal>
+          <br />
+          <RowLink href="mailto:nic@nicmurphy.com">Email</RowLink>
+        </RightColumn>
+      </Row>
+    </Container>
+  )
+}
 
 const Container = styled.header`
   ${pageContentStyles}
