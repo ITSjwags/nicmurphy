@@ -8,10 +8,14 @@ type BioModalProps = {
   children: React.ReactNode
 }
 
+const FOCUSABLE_SELECTOR =
+  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+
 const BioModal = ({ label, children }: BioModalProps) => {
   const [showModal, toggleModal] = useState(false)
   const triggerRef = useRef<HTMLButtonElement>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
+  const modalRef = useRef<HTMLDivElement>(null)
 
   const handleClick = () => {
     toggleModal((current) => !current)
@@ -22,13 +26,37 @@ const BioModal = ({ label, children }: BioModalProps) => {
 
     closeRef.current?.focus()
 
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') toggleModal(false)
+      if (event.key === 'Escape') {
+        toggleModal(false)
+        return
+      }
+
+      if (event.key !== 'Tab' || !modalRef.current) return
+
+      const focusable =
+        modalRef.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)
+      if (focusable.length === 0) return
+
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
     }
     window.addEventListener('keydown', handleKeyDown)
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = previousOverflow
       triggerRef.current?.focus()
     }
   }, [showModal])
@@ -40,7 +68,12 @@ const BioModal = ({ label, children }: BioModalProps) => {
       </Trigger>
 
       {showModal && (
-        <Modal role="dialog" aria-modal="true" aria-label={label}>
+        <Modal
+          ref={modalRef}
+          role="dialog"
+          aria-modal="true"
+          aria-label={label}
+        >
           <Close ref={closeRef} onClick={handleClick} aria-label="Close bio">
             X
           </Close>
