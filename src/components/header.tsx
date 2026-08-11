@@ -153,14 +153,14 @@ const RoleLink = styled(GatsbyLink)`
 `
 
 const Genres = styled.p`
-  font-size: ${vwCap(2.3)};
+  font-size: ${vwCap(2.35)};
   font-weight: bold;
   margin: ${vwCap(1)} 0 0 0;
   text-align: center;
 `
 
 const Tagline = styled.p`
-  font-size: ${vwCap(2.2)};
+  font-size: ${vwCap(2.1)};
   font-style: italic;
   margin: ${vwCap(1)} 0 0 0;
   text-align: center;
