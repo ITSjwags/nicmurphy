@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
 
-export const BREAKPOINT_PX = 1280
+export const BREAKPOINT_PX = 1150
 
 // Grows with viewport exactly as before up to BREAKPOINT_PX, then holds steady.
 // Negative values need max() instead of min() since capping means limiting how

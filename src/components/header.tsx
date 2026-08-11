@@ -2,32 +2,59 @@ import { Link as GatsbyLink, graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import { pageContentStyles, vwCap } from '../utils/scale'
+import { wideSpaced } from '../utils/text'
 import BioModal from './bio-modal'
 import Link, { linkStyles } from './link'
 
+type HomePageQuery = {
+  datoCmsHomePage: {
+    headline: string
+    roleTitle: string
+    genres: string
+    taglineWords: string
+    instagramUrl: string | null
+    vimeoUrl: string | null
+    email: string
+    bio: string
+    currentRoles: {
+      role: string
+      organization: string
+      url: string | null
+    }[]
+  }
+}
+
 const Header = () => {
-  const data = useStaticQuery<{ datoCmsBio: { text: string } }>(graphql`
-    query BioText {
-      datoCmsBio {
-        text
+  const data = useStaticQuery<HomePageQuery>(graphql`
+    query HomePage {
+      datoCmsHomePage {
+        headline
+        roleTitle
+        genres
+        taglineWords
+        instagramUrl
+        vimeoUrl
+        email
+        bio
+        currentRoles {
+          ... on DatoCmsCurrentRoleBlock {
+            role
+            organization
+            url
+          }
+        }
       }
     }
   `)
-  const bio = data.datoCmsBio.text.split('\n\n')
+  const homePage = data.datoCmsHomePage
+  const bio = homePage.bio.split('\n\n')
 
   return (
     <Container>
-      <Headline>Nic Murphy</Headline>
-      <RoleLink to="/work">
-        Multimedia Director, Editor, Producer, Writer
-      </RoleLink>
-      <Genres>
-        Theater - Film - Photos - Documentary - Podcast - Live Events -
-        Immersive Activations
-      </Genres>
-      <Tagline>
-        Leadership&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creativity&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Organization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execution&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enthusiasm
-      </Tagline>
+      <Headline>{homePage.headline}</Headline>
+      <RoleLink to="/work">{homePage.roleTitle}</RoleLink>
+      <Genres>{homePage.genres}</Genres>
+      <Tagline>{wideSpaced(homePage.taglineWords, 5)}</Tagline>
 
       <Row>
         <NavLink to="/photography">Photography</NavLink>
@@ -35,42 +62,49 @@ const Header = () => {
       </Row>
 
       <CurrentRoles>
-        <strong>Artistic Director</strong> <Lowercase>at</Lowercase>{' '}
-        <RoleAnchor
-          href="https://www.instagram.com/thepublicassembly/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Public Assembly Theater Co.
-        </RoleAnchor>
-        <br />
-        <strong>Head of Production</strong> <Lowercase>at</Lowercase>{' '}
-        <RoleAnchor
-          href="https://misfit.co/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Misfit
-        </RoleAnchor>
+        {homePage.currentRoles.map((role, index) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: roles come from one CMS field per render, never reordered client-side
+          <React.Fragment key={index}>
+            {index > 0 && <br />}
+            <strong>{role.role}</strong> <Lowercase>at</Lowercase>{' '}
+            {role.url ? (
+              <RoleAnchor
+                href={role.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {role.organization}
+              </RoleAnchor>
+            ) : (
+              role.organization
+            )}
+          </React.Fragment>
+        ))}
       </CurrentRoles>
 
       <Row>
         <div>
-          <RowLink
-            href="https://www.instagram.com/nharrisonmurphy/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </RowLink>
-          <br />
-          <RowLink
-            href="https://vimeo.com/nicmurphy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vimeo
-          </RowLink>
+          {homePage.instagramUrl && (
+            <>
+              <RowLink
+                href={homePage.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </RowLink>
+              <br />
+            </>
+          )}
+          {homePage.vimeoUrl && (
+            <RowLink
+              href={homePage.vimeoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Vimeo
+            </RowLink>
+          )}
         </div>
         <RightColumn>
           <BioModal label="Bio">
@@ -88,7 +122,7 @@ const Header = () => {
             ))}
           </BioModal>
           <br />
-          <RowLink href="mailto:nic@nicmurphy.com">Email</RowLink>
+          <RowLink href={`mailto:${homePage.email}`}>Email</RowLink>
         </RightColumn>
       </Row>
     </Container>
@@ -112,14 +146,14 @@ const Headline = styled.h1`
 const RoleLink = styled(GatsbyLink)`
   ${linkStyles}
   display: block;
-  font-size: ${vwCap(3.3)};
+  font-size: ${vwCap(3.2)};
   margin: 0;
   text-align: center;
   text-transform: uppercase;
 `
 
 const Genres = styled.p`
-  font-size: ${vwCap(2.5)};
+  font-size: ${vwCap(2.3)};
   font-weight: bold;
   margin: ${vwCap(1)} 0 0 0;
   text-align: center;

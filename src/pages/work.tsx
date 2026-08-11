@@ -12,6 +12,9 @@ import { vwCap } from '../utils/scale'
 
 export const query = graphql`
   query WorkCredits {
+    datoCmsHomePage {
+      roleTitle
+    }
     allDatoCmsFeaturedWork(sort: [{ position: ASC }]) {
       nodes {
         id
@@ -43,6 +46,9 @@ type Credit = {
 
 type WorkPageProps = {
   data: {
+    datoCmsHomePage: {
+      roleTitle: string
+    }
     allDatoCmsFeaturedWork: {
       nodes: FeaturedWork[]
     }
@@ -53,6 +59,7 @@ type WorkPageProps = {
 }
 
 const WorkPage = ({ data }: WorkPageProps) => {
+  const roleTitle = data.datoCmsHomePage.roleTitle
   const featured = data.allDatoCmsFeaturedWork.nodes
   const credits = data.allDatoCmsCredit.nodes
 
@@ -62,7 +69,7 @@ const WorkPage = ({ data }: WorkPageProps) => {
         <BackRow>
           <BackLink />
         </BackRow>
-        <Title>Multimedia Director, Editor, Producer, Writer</Title>
+        <Title>{roleTitle}</Title>
 
         {featured.map((item) => (
           <FeaturedBlock key={item.id}>

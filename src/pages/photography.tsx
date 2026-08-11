@@ -15,10 +15,15 @@ import {
 import Seo from '../components/seo'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
+import { wideSpaced } from '../utils/text'
 
 export const query = graphql`
   query PhotographyPage {
     datoCmsPhotographyPage {
+      title
+      tagline
+      subtagline
+      portfolioLabel
       heroImage {
         alt
         gatsbyImageData(layout: FULL_WIDTH)
@@ -36,6 +41,10 @@ export const query = graphql`
 type PhotographyPageProps = {
   data: {
     datoCmsPhotographyPage: {
+      title: string
+      tagline: string
+      subtagline: string
+      portfolioLabel: string
       heroImage: {
         alt: string | null
         gatsbyImageData: IGatsbyImageData
@@ -48,7 +57,8 @@ type PhotographyPageProps = {
 }
 
 const PhotographyPage = ({ data }: PhotographyPageProps) => {
-  const { heroImage } = data.datoCmsPhotographyPage
+  const { title, tagline, subtagline, portfolioLabel, heroImage } =
+    data.datoCmsPhotographyPage
   const categories = data.allDatoCmsPhotographyCategory.nodes
 
   return (
@@ -57,17 +67,12 @@ const PhotographyPage = ({ data }: PhotographyPageProps) => {
         <BackRow>
           <BackLink />
         </BackRow>
-        <Title>Photography</Title>
+        <Title>{title}</Title>
 
-        <Tagline>
-          Warm&nbsp;&nbsp;Unique&nbsp;&nbsp;Reliable&nbsp;&nbsp;Easy to Work
-          With
-        </Tagline>
-        <SubTagline>
-          Capturing the beautiful, ethnographic essence in still form
-        </SubTagline>
+        <Tagline>{wideSpaced(tagline)}</Tagline>
+        <SubTagline>{subtagline}</SubTagline>
 
-        <PortfolioLabel>Selected Portfolio:</PortfolioLabel>
+        <PortfolioLabel>{portfolioLabel}</PortfolioLabel>
         <CategoryList>
           {categories.map((category) => (
             <CategoryItem key={category.label}>

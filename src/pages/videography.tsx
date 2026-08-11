@@ -14,9 +14,15 @@ import Seo from '../components/seo'
 import VideoEmbed from '../components/video-embed'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
+import { wideSpaced } from '../utils/text'
 
 export const query = graphql`
   query VideographyPage {
+    datoCmsVideographyPage {
+      title
+      tagline
+      subtagline
+    }
     allDatoCmsVideographyCategory(sort: [{ position: ASC }]) {
       nodes {
         name
@@ -40,6 +46,11 @@ type Work = {
 
 type VideographyPageProps = {
   data: {
+    datoCmsVideographyPage: {
+      title: string
+      tagline: string
+      subtagline: string
+    }
     allDatoCmsVideographyCategory: {
       nodes: { name: string }[]
     }
@@ -50,6 +61,7 @@ type VideographyPageProps = {
 }
 
 const VideographyPage = ({ data }: VideographyPageProps) => {
+  const { title, tagline, subtagline } = data.datoCmsVideographyPage
   const categories = data.allDatoCmsVideographyCategory.nodes.map(
     (node) => node.name
   )
@@ -61,15 +73,10 @@ const VideographyPage = ({ data }: VideographyPageProps) => {
         <BackRow>
           <BackLink />
         </BackRow>
-        <Title>Videography</Title>
+        <Title>{title}</Title>
 
-        <Tagline>
-          Warm&nbsp;&nbsp;Unique&nbsp;&nbsp;Reliable&nbsp;&nbsp;Low Impact Doc
-          Style
-        </Tagline>
-        <SubTagline>
-          Capturing the beautiful, ethnographic essence in moving form
-        </SubTagline>
+        <Tagline>{wideSpaced(tagline)}</Tagline>
+        <SubTagline>{subtagline}</SubTagline>
 
         <CategoryGrid>
           {categories.map((category) => (
