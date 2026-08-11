@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import BackLink from '../components/back-link'
@@ -6,6 +7,22 @@ import { PageContent, Title } from '../components/page-header'
 import Seo from '../components/seo'
 import seoKeywords from '../data/keywords.json'
 import { vwCap } from '../utils/scale'
+
+export const query = graphql`
+  query NotFoundPage {
+    datoCmsHomePage {
+      roleTitle
+    }
+  }
+`
+
+type NotFoundPageProps = {
+  data: {
+    datoCmsHomePage: {
+      roleTitle: string
+    }
+  }
+}
 
 const NotFoundPage = () => (
   <Layout>
@@ -21,11 +38,17 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export const Head = ({ location }: { location: { pathname: string } }) => (
+export const Head = ({
+  location,
+  data,
+}: {
+  location: { pathname: string }
+  data: NotFoundPageProps['data']
+}) => (
   <Seo
     title="Nic Murphy - Page Not Found"
     keywords={seoKeywords}
-    description="Nic Murphy - Multimedia Director, Editor, Producer, Writer"
+    description={`Nic Murphy - ${data.datoCmsHomePage.roleTitle}`}
     pathname={location.pathname}
   />
 )

@@ -100,11 +100,17 @@ const WorkPage = ({ data }: WorkPageProps) => {
   )
 }
 
-export const Head = ({ location }: { location: { pathname: string } }) => (
+export const Head = ({
+  location,
+  data,
+}: {
+  location: { pathname: string }
+  data: WorkPageProps['data']
+}) => (
   <Seo
     title="Nic Murphy - Work"
     keywords={seoKeywords}
-    description="Nic Murphy - Multimedia Director, Editor, Producer, Writer"
+    description={`Nic Murphy - ${data.datoCmsHomePage.roleTitle}`}
     pathname={location.pathname}
   />
 )

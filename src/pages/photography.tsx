@@ -100,11 +100,17 @@ const PhotographyPage = ({ data }: PhotographyPageProps) => {
   )
 }
 
-export const Head = ({ location }: { location: { pathname: string } }) => (
+export const Head = ({
+  location,
+  data,
+}: {
+  location: { pathname: string }
+  data: PhotographyPageProps['data']
+}) => (
   <Seo
     title="Nic Murphy - Photography"
     keywords={seoKeywords}
-    description="Nic Murphy - Photography, warm and reliable capturing the beautiful, ethnographic essence in still form"
+    description={`Nic Murphy - Photography, ${data.datoCmsPhotographyPage.subtagline}`}
     pathname={location.pathname}
   />
 )

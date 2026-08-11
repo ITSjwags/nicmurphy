@@ -96,11 +96,17 @@ const VideographyPage = ({ data }: VideographyPageProps) => {
   )
 }
 
-export const Head = ({ location }: { location: { pathname: string } }) => (
+export const Head = ({
+  location,
+  data,
+}: {
+  location: { pathname: string }
+  data: VideographyPageProps['data']
+}) => (
   <Seo
     title="Nic Murphy - Videography"
     keywords={seoKeywords}
-    description="Nic Murphy - Videography, warm and reliable doc style capturing the beautiful, ethnographic essence in moving form"
+    description={`Nic Murphy - Videography, ${data.datoCmsVideographyPage.subtagline}`}
     pathname={location.pathname}
   />
 )
