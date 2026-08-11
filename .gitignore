@@ -53,10 +53,15 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.local
+.env.*.local
 
 # gatsby files
 .cache/
 public
+
+# Scratch scripts (one-off cma:script file-mode scripts, etc.)
+tmp/
 
 # Mac files
 .DS_Store
@@ -68,3 +73,6 @@ yarn-error.log
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Local Netlify folder
+.netlify
